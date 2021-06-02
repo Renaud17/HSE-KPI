@@ -2044,7 +2044,7 @@ def main():
             ####fin
             st.success("Votre compte a été créé avec succès")
             st.info("Allez au menu de connexion pour vous connecter")
-        st.image("http://cabinetnpm.com/wp-content/uploads/2020/02/t%C3%A9l%C3%A9chargement.png",width=700,)
+        st.image("http://cabinetnpm.com/wp-content/uploads/2020/02/t%C3%A9l%C3%A9chargement.png",width=200,)
 
 
 
