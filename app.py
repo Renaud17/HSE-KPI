@@ -271,7 +271,7 @@ def main():
                     st.subheader("")
                     image_temp ="""
                     <div style="background-color:#464e5f;padding:10px;border-radius:5px;margin:10px;">
-                    <h4 style="color:white;text-align:center;">Bienvenue a vous je vous souhaite une bonne experience vos commentaire sont les bienvenues pour ameliorer cet outil</h1>
+                    <h4 style="color:white;text-align:right;">Bienvenue a vous je vous souhaite une bonne experience vos commentaire sont les bienvenues pour ameliorer cet outil</h1>
                     <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="vertical-align: middle;width: 50px;height: 50px;border-radius: 50%;" >
                     <br/>
                     <br/>
