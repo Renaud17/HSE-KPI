@@ -270,14 +270,14 @@ def main():
                 if task == "":
                     st.subheader("")
                     image_temp ="""
-                    <div style="background-color:white;padding:10px;border-radius:5px;margin:10px;">
-                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="center-align: middle;width: 50px;height: 50px;border-radius: 50%;" >
+                    <div style="background-color:#464e5f;padding:10px;border-radius:5px;margin:10px;">
+                    <h4 style="color:white;text-align:center;">Bienvenue a vous je vous souhaite une bonne experience vos commentaire sont les bienvenues pour ameliorer cet outil</h1>
+                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="vertical-align: middle;width: 50px;height: 50px;border-radius: 50%;" >
                     <br/>
                     <br/>
                     </div>
                     """
                     st.markdown(image_temp, unsafe_allow_html = True)
-                    
                     st.markdown('### GESTION DES INDICATEURS HSE')
                     choix = st.selectbox("", ["AJOUTER", "AFFICHER", "METTRE À JOUR", "SUPPRIMER"])
                     if choix == "AJOUTER":
