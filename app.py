@@ -261,6 +261,7 @@ def main():
             result = login_user(email,check_hashes(password,hashed_pswd))
             if result:
                 st.success("Connecté en tant que {}".format(email))
+		st.warning("Si vous faites des enregistrements à une date antérieure à celle de votre inscription veuillez spécifier l'intervalle de date, car l'affichage des données est par défaut à partir de votre jour d'inscription.")
 
                 #task = st.selectbox("Task",["Add Post","Analytics","Profiles"])
                 task = ""
