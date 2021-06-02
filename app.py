@@ -269,8 +269,8 @@ def main():
                 task = ""
                 if task == "":
                     st.subheader("")
-                    st.sidebar.markdown('### GESTION DES INDICATEURS HSE')
-                    choix = st.sidebar.selectbox("", ["AJOUTER", "AFFICHER", "METTRE À JOUR", "SUPPRIMER"])
+                    st.markdown('### GESTION DES INDICATEURS HSE')
+                    choix = st.selectbox("Tâches", ["AJOUTER", "AFFICHER", "METTRE À JOUR", "SUPPRIMER"])
                     if choix == "AJOUTER":
                         st.subheader("AJOUTER DES DONNÉES")
                         col1, col2= st.beta_columns(2)
