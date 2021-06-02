@@ -419,7 +419,6 @@ def main():
                             IDD2 = email.strip('][').split(', ')
 
                             #ACCUEIL
-			    @st.cache
                             def Accueil_2(df_Accueil: pd.DataFrame) -> pd.DataFrame:
                                 df_Accueil2 = df_Accueil[(df_Accueil["IDD"].isin(IDD2))]
                                 return df_Accueil2.loc[1:, ["id","Chantier","Nbre_Arrivant","Nbre_induction","Date"]]
