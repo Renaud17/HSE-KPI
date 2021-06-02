@@ -249,7 +249,7 @@ def main():
         <p style="text-align:justify">{}</p>
         </div>
 		"""
-		components.html(html_temp)
+	components.html(html_temp)
         
         #st.image("https://i0.wp.com/www.aprentiv.com/wp-content/uploads/2017/04/Pr%C3%A9sentation-des-normes-dhygi%C3%A8ne-et-s%C3%A9curit%C3%A9-%C3%A0-respecter-en-entreprise.png",width=100%,)
 
