@@ -2046,7 +2046,7 @@ def main():
             st.info("Allez au menu de connexion pour vous connecter")
         col1, col2, col3 = st.beta_columns([1,6,1])
         with col2:
-            st.image("http://cabinetnpm.com/wp-content/uploads/2020/02/t%C3%A9l%C3%A9chargement.png",width=700,)
+            st.image("http://cabinetnpm.com/wp-content/uploads/2020/02/t%C3%A9l%C3%A9chargement.png",width=300,)
 
 
 
