@@ -16,6 +16,7 @@ import plotly.express as px
 from PIL import Image
 import seaborn as sns
 import streamlit.components.v1 as components
+from matplotlib import ft2font
 
 def to_excel(df):
     output = BytesIO()
