@@ -1133,7 +1133,7 @@ def main():
                             #filtrage par chantier
                             splitted_df_NC1 = df_NC1['Chantier'].str.split(',')
                             unique_vals3 = list(dict.fromkeys([y for x in splitted_df_NC1[1:] for y in x]).keys())
-                            filtrechantier3 = st.selectbox('AFFICHEZ VOTRE GRILLE EN FONCTION DU CHANTIER', unique_vals3,key=11)
+                            filtrechantier3 = st.selectbox('AFFICHEZ VOTRE GRILLE EN FONCTION DU CHANTIER', unique_vals3,key=21)
                             mask =  (df_NC1['Chantier'] == filtrechantier3)
                             df_filter3=df_NC1.loc[mask]
                             st.dataframe(df_filter3)
@@ -1184,7 +1184,7 @@ def main():
                                 #filtrage par chantier
                                 splitted_df_NC1 = df_NC1['Chantier'].str.split(',')
                                 unique_vals3 = list(dict.fromkeys([y for x in splitted_df_NC1[1:] for y in x]).keys())
-                                filtrechantier3 = st.selectbox('AFFICHEZ VOTRE GRILLE EN FONCTION DU CHANTIER', unique_vals3,key=11)
+                                filtrechantier3 = st.selectbox('AFFICHEZ VOTRE GRILLE EN FONCTION DU CHANTIER', unique_vals3,key=22)
                                 mask =  (df_NC1['Chantier'] == filtrechantier3)
                                 df_filter3=df_NC1.loc[mask]
                                 st.dataframe(df_filter3)
