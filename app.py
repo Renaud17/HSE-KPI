@@ -247,7 +247,7 @@ def main():
         st.markdown(html_temp, unsafe_allow_html = True)
         col1, col2, col3 = st.beta_columns([1,6,1])
         with col2:
-            st.image("https://i0.wp.com/www.aprentiv.com/wp-content/uploads/2017/04/Pr%C3%A9sentation-des-normes-dhygi%C3%A8ne-et-s%C3%A9curit%C3%A9-%C3%A0-respecter-en-entreprise.png",width=300,)
+            st.image("https://i0.wp.com/www.aprentiv.com/wp-content/uploads/2017/04/Pr%C3%A9sentation-des-normes-dhygi%C3%A8ne-et-s%C3%A9curit%C3%A9-%C3%A0-respecter-en-entreprise.png",width=400,)
 
     elif choice == "Connexion":
         st.subheader("Section Connexion")
