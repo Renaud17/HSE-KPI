@@ -1072,7 +1072,7 @@ def main():
 
 
                             
-                            idval = list(df_filter2[2:]['id'])
+                            idval = list(df_filter2['id'])
                             selected_id = st.selectbox("SELECTIONEZ l'ID DE LA LIGNE À MODIFIER", idval,key=9)
                             name_result = get_id_TBM(selected_id)
 
@@ -1110,11 +1110,11 @@ def main():
 
                                 df_TBM1 = TBM_2(df_TBM)
                                 #filtrage par chantier
-                                splitted_df_TBM1 = df_TBM1[2:]['Chantier'].str.split(',')
+                                splitted_df_TBM1 = df_TBM1['Chantier'].str.split(',')
                                 unique_vals2 = list(dict.fromkeys([y for x in splitted_df_TBM1[1:] for y in x]).keys())
                                 filtrechantier2 = st.selectbox('AFFICHEZ VOTRE GRILLE EN FONCTION DU CHANTIER', unique_vals2,key=10)
-                                mask =  (df_TBM1[2:]['Chantier'] == filtrechantier2)
-                                df_filter2=df_TBM1[2:].loc[mask]
+                                mask =  (df_TBM1['Chantier'] == filtrechantier2)
+                                df_filter2=df_TBM1.loc[mask]
                                 st.dataframe(df_filter2)
                                 
                         
@@ -1785,11 +1785,11 @@ def main():
 
                             df_JSA1 = JSA_2(df_JSA)
                             #filtrage par chantier
-                            splitted_df_JSA1 = df_JSA1[2:]['Chantier'].str.split(',')
-                            unique_vals6 = list(dict.fromkeys([y for x in splitted_df_JSA1 for y in x]).keys())
+                            splitted_df_JSA1 = df_JSA1['Chantier'].str.split(',')
+                            unique_vals6 = list(dict.fromkeys([y for x in splitted_df_JSA1[1:] for y in x]).keys())
                             filtrechantier6 = st.selectbox('AFFICHEZ VOTRE GRILLE EN FONCTION DU CHANTIER', unique_vals6,key=31)
-                            mask = (df_JSA1[2:]['Chantier'] == filtrechantier6)
-                            df_filter6=df_JSA1[2:].loc[mask]
+                            mask = (df_JSA1['Chantier'] == filtrechantier6)
+                            df_filter6=df_JSA1.loc[mask]
                             st.dataframe(df_filter6)
 
                             idval = list(df_filter6['id'])
@@ -1831,7 +1831,7 @@ def main():
                             df_IA1 = IA_2(df_IA)
 
                             #filtrage par chantier
-                            splitted_df_IA1 = df_IA1[2:]['Chantier'].str.split(',')
+                            splitted_df_IA1 = df_IA1['Chantier'].str.split(',')
                             unique_vals7 = list(dict.fromkeys([y for x in splitted_df_IA1[1:] for y in x]).keys())
                             filtrechantier7 = st.selectbox('AFFICHEZ VOTRE GRILLE EN FONCTION DU CHANTIER', unique_vals7,key=33)
                             mask = (df_IA1['Chantier'] == filtrechantier7)
