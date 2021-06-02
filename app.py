@@ -178,20 +178,20 @@ def main():
 			<div class="mySlides fade">
 			  <div class="numbertext">1 / 3</div>
 			  <img src="https://cdn.shopify.com/s/files/1/2382/6729/products/SP124958.jpg?v=1536179866" style="width:100%">
-			  <div class="text">Caption Text</div>
+			  <div class="text"></div>
 			</div>
 
 			<div class="mySlides fade">
 			  <div class="numbertext">2 / 3</div>
 
 			  <img src="https://www.hsetrain.org/images/slide1.jpg" style="width:100%">
-			  <div class="text">Caption Two</div>
+			  <div class="text"></div>
 			</div>
 
 			<div class="mySlides fade">
 			  <div class="numbertext">3 / 3</div>
 			  <img src="https://www.spc.com.sg/wp-content/uploads/2015/11/banner-community-society-hse.jpg" style="width:100%">
-			  <div class="text">Caption Three</div>
+			  <div class="text"></div>
 			</div>
 
 			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -247,7 +247,7 @@ def main():
         st.markdown(html_temp, unsafe_allow_html = True)
         col1, col2, col3 = st.beta_columns([1,6,1])
         with col2:
-            st.image("https://i0.wp.com/www.aprentiv.com/wp-content/uploads/2017/04/Pr%C3%A9sentation-des-normes-dhygi%C3%A8ne-et-s%C3%A9curit%C3%A9-%C3%A0-respecter-en-entreprise.png",width=400,)
+            st.image("https://i0.wp.com/www.aprentiv.com/wp-content/uploads/2017/04/Pr%C3%A9sentation-des-normes-dhygi%C3%A8ne-et-s%C3%A9curit%C3%A9-%C3%A0-respecter-en-entreprise.png",width=300,)
 
     elif choice == "Connexion":
         st.subheader("Section Connexion")
