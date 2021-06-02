@@ -459,7 +459,7 @@ def main():
                             st.dataframe(df_filter1_df_melt)
 
                             fig = px.bar(df_filter1_df_melt, x = 'variable', y = 'valeur',color="variable")
-                            st.plotly_chart(fig, use_container_width=False)
+                            st.plotly_chart(fig, use_container_width=True)
 
 
                         BRIEFING_exp= st.beta_expander("BRIEFING DE SÉCURITÉ( TBM)")
