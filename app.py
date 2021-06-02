@@ -15,7 +15,7 @@ import plotly.express as px
 from PIL import Image
 import streamlit.components.v1 as components
 
-@st.cache
+
 def to_excel(df):
     output = BytesIO()
     writer = pd.ExcelWriter(output, engine='xlsxwriter')
@@ -23,7 +23,7 @@ def to_excel(df):
     writer.save()
     processed_data = output.getvalue()
     return processed_data
-@st.cache
+
 def get_table_download_link(df):
     """Generates a link allowing the data in a given panda dataframe to be downloaded
     in:  dataframe
@@ -34,7 +34,7 @@ def get_table_download_link(df):
     return f'<a href="data:application/octet-stream;base64,{b64.decode()}" download="extract.xlsx">Votre fichier excel</a>' # decode b'abc' => abc
 
 #pour verifier le type d'entrée
-@st.cache
+
 def inputcheck(inputext):
     try:
         inputext = int(inputext)
@@ -53,11 +53,11 @@ c = conn.cursor()
 # Security
 #passlib,hashlib,bcrypt,scrypt
 import hashlib
-@st.cache
+
 def make_hashes(password):
     return hashlib.sha256(str.encode(password)).hexdigest()
 
-@st.cache
+
 def check_hashes(password,hashed_text):
     if make_hashes(password) == hashed_text:
         return hashed_text
@@ -476,7 +476,7 @@ def main():
                             #TMB
                             df_TBM = pd.DataFrame(view_TBM(), columns=["id","IDD","Chantier","Nbre_chantier","Nbre_TBM","Date"])
                             IDD2 = email.strip('][').split(', ')
-			    @st.cache
+			    
                             def TBM_2(df_TBM: pd.DataFrame) -> pd.DataFrame:
                                 df_TBM2 = df_TBM[(df_TBM["IDD"].isin(IDD2))]
                                 return df_TBM2.loc[1:, ["id","Chantier","Nbre_chantier","Nbre_TBM","Date"]]
@@ -535,7 +535,7 @@ def main():
                             df_NC = pd.DataFrame(view_NC(), columns=["id","IDD","Chantier","NCR","FNCR","NCC","FNCC","Date"])
                             IDD2 = email.strip('][').split(', ')
 
-			    @st.cache
+			    
                             def NC_2(df_NC: pd.DataFrame) -> pd.DataFrame:
                                 df_NC2 = df_NC[(df_NC["IDD"].isin(IDD2))]
                                 return df_NC2.loc[1:, ["id","Chantier","NCR","FNCR","NCC","FNCC","Date"]]
@@ -615,7 +615,7 @@ def main():
                             #CHANGEMENTS
                             df_Changements = pd.DataFrame(view_Changements(), columns=["id","IDD","Chantier","NCH","FNCH","NCHC","FNCHC","Date"])
                             IDD2 = email.strip('][').split(', ')
-			    @st.cache
+			
                             def Changements_2(df_Changements: pd.DataFrame) -> pd.DataFrame:
                                 df_Changements2 = df_Changements[(df_Changements["IDD"].isin(IDD2))]
                                 return df_Changements2.loc[1:, ["id","Chantier","NCH","FNCH","NCHC","FNCHC","Date"]]
@@ -692,7 +692,7 @@ def main():
                             #ANOMALIES
                             df_Anomalies = pd.DataFrame(view_Anomalies(), columns=["id","IDD","Chantier","NA","FNA","NAC","FNAC","Date"])
                             IDD2 = email.strip('][').split(', ')
-			    @st.cache
+			    
                             def Anomalies_2(df_Anomalies: pd.DataFrame) -> pd.DataFrame:
                                 df_Anomalies2 = df_Anomalies[(df_Anomalies["IDD"].isin(IDD2))]
                                 return df_Anomalies2.loc[1:, ["id","Chantier","NA","FNA","NAC","FNAC","Date"]]
@@ -767,7 +767,7 @@ def main():
                             #JSA
                             df_JSA = pd.DataFrame(view_JSA(), columns=["id","IDD","Chantier","NAct","NJSA","Date"])
                             IDD2 = email.strip('][').split(', ')
-			    @st.cache
+			    
                             def JSA_2(df_JSA: pd.DataFrame) -> pd.DataFrame:
                                 df_JSA2 = df_JSA[(df_JSA["IDD"].isin(IDD2))]
                                 return df_JSA2.loc[1:, ["id","Chantier","NAct","NJSA","Date"]]
@@ -828,7 +828,7 @@ def main():
                             #IA
                             df_IA = pd.DataFrame(view_Incident_Accident(), columns=["id","IDD","Chantier","NInc","AAA","ASA","AT","NJP","Date"])
                             IDD2 = email.strip('][').split(', ')
-			    @st.cache
+			    
                             def IA_2(df_IA: pd.DataFrame) -> pd.DataFrame:
                                 df_IA = df_IA[(df_IA["IDD"].isin(IDD2))]
                                 return df_IA.loc[1:, ["id","Chantier","NInc","AAA","ASA","AT","NJP","Date"]]
@@ -913,7 +913,7 @@ def main():
                             #Audit
                             df_Audit = pd.DataFrame(view_Audit(), columns=["id","IDD","Chantier","AC","VC","NEU","SMPAR","NPR","IE","Date"])
                             IDD2 = email.strip('][').split(', ')
-			    @st.cache
+			    
                             def Audit_2(df_Audit: pd.DataFrame) -> pd.DataFrame:
                                 df_Audit = df_Audit[(df_Audit["IDD"].isin(IDD2))]
                                 return df_Audit.loc[1:, ["id","Chantier","AC","VC","NEU","SMPAR","NPR","IE","Date"]]
