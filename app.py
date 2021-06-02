@@ -238,18 +238,13 @@ def main():
 
 			""")
         html_temp = """
-		<div style="background-color:#464e5f;padding:10px;border-radius:10px;margin:10px;">
-		<h4 style="color:white;text-align:center;">HSE KPI RECORDER</h1>
-		<img src="http://cabinetnpm.com/wp-content/uploads/2020/02/t%C3%A9l%C3%A9chargement.png" alt="Avatar" style="vertical-align: middle;float:left;width: 50px;height: 50px;border-radius: 50%;" >
-		<h2></h2>
-		<h3></h3>
-		<br/>
-		<br/>   
-		<p style="text-align:justify">Application d'analyse et de suivi des indicateurs de performance HSE</p>
+		<div style="background-color:#464e5f;padding:10px;border-radius:10px;margin:3px;">
+		<h2 style="color:white;text-align:center;">HSE KPI RECORDER</h2>
+		<h3 style="color:white;text-align:center;">Application d'analyse et de suivi des indicateurs de performance HSE</h3>
 		</div>
 		"""
         #components.html(html_temp)
-	st.markdown(html_temp, unsafe_allow_html = True)
+        st.markdown(html_temp, unsafe_allow_html = True)
         
         st.image("https://i0.wp.com/www.aprentiv.com/wp-content/uploads/2017/04/Pr%C3%A9sentation-des-normes-dhygi%C3%A8ne-et-s%C3%A9curit%C3%A9-%C3%A0-respecter-en-entreprise.png",width=600,)
 
