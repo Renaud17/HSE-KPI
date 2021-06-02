@@ -15,7 +15,7 @@ import plotly.express as px
 from PIL import Image
 import streamlit.components.v1 as components
 
-@st.cache
+
 def to_excel(df):
     output = BytesIO()
     writer = pd.ExcelWriter(output, engine='xlsxwriter')
@@ -23,7 +23,7 @@ def to_excel(df):
     writer.save()
     processed_data = output.getvalue()
     return processed_data
-@st.cache
+
 def get_table_download_link(df):
     """Generates a link allowing the data in a given panda dataframe to be downloaded
     in:  dataframe
@@ -34,7 +34,7 @@ def get_table_download_link(df):
     return f'<a href="data:application/octet-stream;base64,{b64.decode()}" download="extract.xlsx">Votre fichier excel</a>' # decode b'abc' => abc
 
 #pour verifier le type d'entrée
-@st.cache
+
 def inputcheck(inputext):
     try:
         inputext = int(inputext)
@@ -53,10 +53,9 @@ c = conn.cursor()
 # Security
 #passlib,hashlib,bcrypt,scrypt
 import hashlib
-@st.cache
 def make_hashes(password):
     return hashlib.sha256(str.encode(password)).hexdigest()
-@st.cache
+
 def check_hashes(password,hashed_text):
     if make_hashes(password) == hashed_text:
         return hashed_text
@@ -179,20 +178,20 @@ def main():
 			<div class="mySlides fade">
 			  <div class="numbertext">1 / 3</div>
 			  <img src="https://cdn.shopify.com/s/files/1/2382/6729/products/SP124958.jpg?v=1536179866" style="width:100%">
-			  <div class="text"></div>
+			  <div class="text">Caption Text</div>
 			</div>
 
 			<div class="mySlides fade">
 			  <div class="numbertext">2 / 3</div>
 
 			  <img src="https://www.hsetrain.org/images/slide1.jpg" style="width:100%">
-			  <div class="text"></div>
+			  <div class="text">Caption Two</div>
 			</div>
 
 			<div class="mySlides fade">
 			  <div class="numbertext">3 / 3</div>
 			  <img src="https://www.spc.com.sg/wp-content/uploads/2015/11/banner-community-society-hse.jpg" style="width:100%">
-			  <div class="text"></div>
+			  <div class="text">Caption Three</div>
 			</div>
 
 			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -239,19 +238,14 @@ def main():
 
 			""")
         html_temp = """
-		<div style="background-color:#464e5f;padding:10px;border-radius:10px;margin:10px;">
-        <h4 style="color:white;text-align:center;">{}</h1>
-        <img src="http://cabinetnpm.com/wp-content/uploads/2020/02/t%C3%A9l%C3%A9chargement.png" alt="Avatar" style="vertical-align: middle;float:left;width: 50px;height: 50px;border-radius: 50%;" >
-        <h2>HSE KPI RECORDER</h2>
-        <h3>HSE Application d'analyse et de suivi des indicateurs de performance HSE</h3>
-        <br/>
-        <br/>   
-        <p style="text-align:justify">{}</p>
-        </div>
+		<div style="background-color:#464e5f;padding:10px;border-radius:10px;margin:3px;">
+		<h2 style="color:white;text-align:center;">HSE KPI RECORDER</h2>
+		<h3 style="color:white;text-align:center;">Application d'analyse et de suivi des indicateurs de performance HSE</h3>
+		</div>
 		"""
-	components.html(html_temp)
+        components.html(html_temp)
         
-        #st.image("https://i0.wp.com/www.aprentiv.com/wp-content/uploads/2017/04/Pr%C3%A9sentation-des-normes-dhygi%C3%A8ne-et-s%C3%A9curit%C3%A9-%C3%A0-respecter-en-entreprise.png",width=100%,)
+        st.image("https://i0.wp.com/www.aprentiv.com/wp-content/uploads/2017/04/Pr%C3%A9sentation-des-normes-dhygi%C3%A8ne-et-s%C3%A9curit%C3%A9-%C3%A0-respecter-en-entreprise.png",width=600,)
 
     elif choice == "Connexion":
         st.subheader("Section Connexion")
