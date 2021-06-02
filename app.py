@@ -287,7 +287,7 @@ def main():
                                     st.subheader("DATE ET NOM DU CHANTIER")
                                     Date = st.date_input("Date")
                                     Chantier = st.text_input("Chantier")
-                                button1=st.button("AJOUTER LES DÉTAILS")
+                                    button1=st.button("AJOUTER LES DÉTAILS")
                                 if button1:
                                     add_Accueil(IDD,Chantier,Nbre_Arrivant,Nbre_induction,Date)
                                     st.success("AJOUTÉ AVEC SUCCÈS: {}".format(Chantier))
@@ -301,7 +301,7 @@ def main():
                                     st.subheader("DATE ET NOM DU CHANTIER")
                                     Date = st.date_input("Date")
                                     Chantier = st.text_input("Chantier")
-                                button2=st.button("AJOUTER LES DÉTAILS")
+                                    button2=st.button("AJOUTER LES DÉTAILS")
                                 if button2:
                                     add_TBM(IDD,Chantier,Nbre_chantier,Nbre_TBM,Date)
                                     st.success("AJOUTÉ AVEC SUCCÈS: {}".format(Chantier))
@@ -316,7 +316,7 @@ def main():
                                     st.subheader("DATE ET NOM DU CHANTIER")
                                     Date = st.date_input("Date")
                                     Chantier = st.text_input("Chantier")
-                                button3=st.button("AJOUTER LES DÉTAILS")
+                                    button3=st.button("AJOUTER LES DÉTAILS")
                                 if button3:
                                     add_NC(IDD,Chantier,NCR,FNCR,NCC,FNCC,Date)
                                     st.success("AJOUTÉ AVEC SUCCÈS: {}".format(Chantier))
@@ -331,7 +331,7 @@ def main():
                                     st.subheader("DATE ET NOM DU CHANTIER")
                                     Date = st.date_input("Date")
                                     Chantier = st.text_input("Chantier")
-                                button4=st.button("AJOUTER LES DÉTAILS")
+                                    button4=st.button("AJOUTER LES DÉTAILS")
                                 if button4:
                                     add_Changements(IDD,Chantier,NCH,FNCH,NCHC,FNCHC,Date)
                                     st.success("AJOUTÉ AVEC SUCCÈS: {}".format(Chantier))
@@ -346,7 +346,7 @@ def main():
                                     st.subheader("DATE ET NOM DU CHANTIER")
                                     Date = st.date_input("Date")
                                     Chantier = st.text_input("Chantier")
-                                button5=st.button("AJOUTER LES DÉTAILS")
+                                    button5=st.button("AJOUTER LES DÉTAILS")
                                 if button5:
                                     add_Anomalies(IDD,Chantier,NA,FNA,NAC,FNAC,Date)
                                     st.success("AJOUTÉ AVEC SUCCÈS: {}".format(Chantier))
@@ -359,7 +359,7 @@ def main():
                                     st.subheader("DATE ET NOM DU CHANTIER")
                                     Date = st.date_input("Date")
                                     Chantier = st.text_input("Chantier")
-                                button6=st.button("AJOUTER LES DÉTAILS")
+                                    button6=st.button("AJOUTER LES DÉTAILS")
                                 if button6:
                                     add_JSA(IDD,Chantier,NAct,NJSA,Date)
                                     st.success("AJOUTÉ AVEC SUCCÈS: {}".format(Chantier))
@@ -375,7 +375,7 @@ def main():
                                     st.subheader("DATE ET NOM DU CHANTIER")
                                     Date = st.date_input("Date")
                                     Chantier = st.text_input("Chantier")
-                                button7=st.button("AJOUTER LES DÉTAILS")
+                                    button7=st.button("AJOUTER LES DÉTAILS")
                                 if button7:
                                     add_Incident_Accident(IDD,Chantier,NInc,AAA,ASA,AT,NJP,Date)
                                     st.success("AJOUTÉ AVEC SUCCÈS: {}".format(Chantier))
@@ -392,7 +392,7 @@ def main():
                                     st.subheader("DATE ET NOM DU CHANTIER")
                                     Date = st.date_input("Date")
                                     Chantier = st.text_input("Chantier")
-                                button8=st.button("AJOUTER LES DÉTAILS")
+                                    button8=st.button("AJOUTER LES DÉTAILS")
                                 if button8:
                                     add_Audit(IDD,Chantier,AC,VC,NEU,SMPAR,PR,IE,Date)
                                     st.success("AJOUTÉ AVEC SUCCÈS: {}".format(Chantier))
