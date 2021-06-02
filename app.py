@@ -1607,7 +1607,7 @@ def main():
 
                             
                             idval = list(df_filter2['id'])
-                            selected_id = st.selectbox("SELECTIONEZ l'ID DE LA LIGNE À SUPPRIMER", idval,key=11)
+                            selected_id = st.selectbox("SELECTIONEZ l'ID DE LA LIGNE À SUPPRIMER", idval,key=41)
                             name_delete = get_id_TBM(selected_id)
                             if name_delete:
                                 id = name_delete[0][0]
