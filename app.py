@@ -273,7 +273,6 @@ def main():
                     <div style="background-color:#464e5f;padding:10px;border-radius:5px;margin:10px;">
 		    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="vertical-align: middle;width: 50px;height: 50px;border-radius: 50%;" >
 		    <br/>
-		    <br/>
 		    <p style="text-align:justify">{}</p>
 		    </div>
                     """
