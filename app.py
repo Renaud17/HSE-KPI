@@ -1626,7 +1626,7 @@ def main():
                                 #filtrage par chantier
                                 splitted_df_TBM1 = df_TBM1['Chantier'].str.split(',')
                                 unique_vals2 = list(dict.fromkeys([y for x in splitted_df_TBM1[1:] for y in x]).keys())
-                                filtrechantier2 = st.selectbox('AFFICHEZ VOTRE GRILLE EN FONCTION DU CHANTIER', unique_vals2,key=25)
+                                filtrechantier2 = st.selectbox('AFFICHEZ VOTRE GRILLE EN FONCTION DU CHANTIER', unique_vals2,key=35)
                                 mask =  (df_TBM1['Chantier'] == filtrechantier2)
                                 df_filter2=df_TBM1.loc[mask]
                                 st.dataframe(df_filter2)
