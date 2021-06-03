@@ -64,7 +64,6 @@ def check_hashes(password,hashed_text):
     return False
     
 
-@st.cache
 def main():
     #couleur du select box
     def style():
