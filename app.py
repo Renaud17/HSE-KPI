@@ -1372,7 +1372,7 @@ def main():
                                     new_FNAC = inputcheck(st.text_input("Nombre de fiche de  Anomalies Corrigées",FNAC))
                                     
                                 with col2:
-                                    st.subheader("DATE ET NOM DU CHANTIER")
+                                    st.subheader("NOM DU CHANTIER")
                                     new_Chantier = st.text_input("Chantier",Chantier,key=5)
                                     
                                 button1=st.button("MODIFIER LES DÉTAILS",key=5)
