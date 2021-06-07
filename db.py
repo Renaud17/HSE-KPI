@@ -1,7 +1,7 @@
 import streamlit as st
 import sqlite3
 
-conn = sqlite3.connect('data.db', check_same_thread=False)
+conn = sqlite3.connect('file:cachedb?mode=memory&cache=shared')
 c = conn.cursor()
 
 def create_table():
