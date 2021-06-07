@@ -1,9 +1,9 @@
 import streamlit as st
-import sqlite3
+import psycopg2
+from sqlalchemy import create_engine
 
-
-conn = sqlite3.connect('data.db', check_same_thread=False)
-c = conn.cursor()
+conn = create_engine('postgresql://dahour:Lenaic17@localhost:5432/data')
+c = conn
 #=================================	
 
 	
