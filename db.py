@@ -1,8 +1,11 @@
 import streamlit as st
-import sqlite3
+#import sqlite3
+import psycopg2
 
-conn = sqlite3.connect('data.db', check_same_thread=False)
-c = conn.cursor()
+#conn = sqlite3.connect('data.db', check_same_thread=False)
+#c = conn.cursor()
+con = psycopg2.connect(database="dcbt0lh9gd4o55", user="djmyopoxfiezbi", password="95b9b8b93a1fabe0440e3d31ffcb6077f55fd04e0ee6061d0c2c5776adc52f89", host="ec2-35-170-85-206.compute-1.amazonaws.com", port="5432")
+c= con.cursor()
 
 def create_table():
     c.execute('CREATE TABLE IF NOT EXISTS userstable(id INTEGER PRIMARY KEY AUTOINCREMENT,email TEXT UNIQUE,password TEXT)')
