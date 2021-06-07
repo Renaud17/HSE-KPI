@@ -7,16 +7,61 @@ from sqlalchemy import create_engine
 con = psycopg2.connect('postgres://djmyopoxfiezbi:95b9b8b93a1fabe0440e3d31ffcb6077f55fd04e0ee6061d0c2c5776adc52f89@ec2-35-170-85-206.compute-1.amazonaws.com:5432/dcbt0lh9gd4o55')
 c = con.cursor()
 
+import psycopg2
+from config import config
+
+
 def create_table():
-    c.execute('CREATE TABLE IF NOT EXISTS userstable(id SERIAL PRIMARY KEY,email TEXT UNIQUE,password TEXT)')
-    c.execute('CREATE TABLE IF NOT EXISTS Accueil(id SERIAL PRIMARY KEY,IDD TEXT,Chantier TEXT,NArrivant VARCHAR,Ninduction VARCHAR,Date DATE)')
-    c.execute('CREATE TABLE IF NOT EXISTS TBM(id SERIAL PRIMARY KEY,IDD TEXT,Chantier TEXT,NChantier VARCHAR,NTBM VARCHAR,Date DATE)')
-    c.execute('CREATE TABLE IF NOT EXISTS NC(id SERIAL PRIMARY KEY,IDD TEXT,Chantier TEXT,NCR VARCHAR,FNCR VARCHAR,NCC VARCHAR,FNCC VARCHAR,Date DATE)')
-    c.execute('CREATE TABLE IF NOT EXISTS Changements(id SERIAL PRIMARY KEY,IDD TEXT,Chantier TEXT,NCH VARCHAR,FNCH VARCHAR,NCHC VARCHAR,FNCHC VARCHAR,Date DATE)')
-    c.execute('CREATE TABLE IF NOT EXISTS Anomalies(id SERIAL PRIMARY KEY,IDD TEXT,Chantier TEXT,NA VARCHAR,FNA VARCHAR,NAC VARCHAR,FNAC VARCHAR,Date DATE)')
-    c.execute('CREATE TABLE IF NOT EXISTS JSA(id SERIAL PRIMARY KEY,IDD TEXT,Chantier TEXT,NAct VARCHAR,NJSA VARCHAR,Date DATE)')
-    c.execute('CREATE TABLE IF NOT EXISTS Incident_Accident(id SERIAL PRIMARY KEY,IDD TEXT,Chantier TEXT,NInc VARCHAR,AAA VARCHAR,ASA VARCHAR,AT VARCHAR,NJP VARCHAR,Date DATE)')
-    c.execute('CREATE TABLE IF NOT EXISTS Audit(id SERIAL PRIMARY KEY,IDD TEXT,Chantier TEXT,AC VARCHAR,VC VARCHAR,NEU VARCHAR,SMPAR VARCHAR,NPR VARCHAR,IE VARCHAR,Date DATE)')
+	""" create tables in the PostgreSQL database"""
+	commands = (
+		"""
+		CREATE TABLE IF NOT EXISTS userstable(id SERIAL PRIMARY KEY,email TEXT UNIQUE,password TEXT)
+		""",
+		""" CREATE TABLE IF NOT EXISTS Accueil(id SERIAL PRIMARY KEY,IDD TEXT,Chantier TEXT,NArrivant VARCHAR,Ninduction VARCHAR,Date DATE)
+		""",
+		"""
+		CREATE TABLE IF NOT EXISTS TBM(id SERIAL PRIMARY KEY,IDD TEXT,Chantier TEXT,NChantier VARCHAR,NTBM VARCHAR,Date DATE)
+		""",
+		"""
+		CREATE TABLE IF NOT EXISTS NC(id SERIAL PRIMARY KEY,IDD TEXT,Chantier TEXT,NCR VARCHAR,FNCR VARCHAR,NCC VARCHAR,FNCC VARCHAR,Date DATE)
+		""",
+		"""
+		CREATE TABLE IF NOT EXISTS Changements(id SERIAL PRIMARY KEY,IDD TEXT,Chantier TEXT,NCH VARCHAR,FNCH VARCHAR,NCHC VARCHAR,FNCHC VARCHAR,Date DATE)
+		""",
+		"""
+		CREATE TABLE IF NOT EXISTS Anomalies(id SERIAL PRIMARY KEY,IDD TEXT,Chantier TEXT,NA VARCHAR,FNA VARCHAR,NAC VARCHAR,FNAC VARCHAR,Date DATE)
+		""",
+		"""
+		CREATE TABLE IF NOT EXISTS JSA(id SERIAL PRIMARY KEY,IDD TEXT,Chantier TEXT,NAct VARCHAR,NJSA VARCHAR,Date DATE)
+		""",
+		"""
+		CREATE TABLE IF NOT EXISTS Incident_Accident(id SERIAL PRIMARY KEY,IDD TEXT,Chantier TEXT,NInc VARCHAR,AAA VARCHAR,ASA VARCHAR,AT VARCHAR,NJP VARCHAR,Date DATE)
+		""",
+		"""
+		CREATE TABLE IF NOT EXISTS Audit(id SERIAL PRIMARY KEY,IDD TEXT,Chantier TEXT,AC VARCHAR,VC VARCHAR,NEU VARCHAR,SMPAR VARCHAR,NPR VARCHAR,IE VARCHAR,Date DATE)
+		""")
+	conn = None
+	try:
+		# read the connection parameters
+		params = config()
+		# connect to the PostgreSQL server
+		conn = psycopg2.connect(**params)
+		c = conn.cursor()
+		# create table one by one
+		for command in commands:
+			c.execute(command)
+		# close communication with the PostgreSQL database server
+		c.close()
+		# commit the changes
+		conn.commit()
+	except (Exception, psycopg2.DatabaseError) as error:
+		print(error)
+	finally:
+		if conn is not None:
+			conn.close()
+
+
+
 	
 #email,password,	
 #========================================================
