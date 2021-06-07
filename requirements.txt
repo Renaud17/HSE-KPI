@@ -1,5 +1,4 @@
 psycopg2
-config
 sqlalchemy 
 matplotlib==3.2.2
 numpy==1.19.3
