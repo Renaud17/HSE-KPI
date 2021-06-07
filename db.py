@@ -25,41 +25,49 @@ def create_table():
 def add_Accueil(IDD,Chantier,NArrivant,Ninduction,Date):
 	c.execute('INSERT INTO Accueil(IDD,Chantier,NArrivant,Ninduction,Date) VALUES (?,?,?,?,?)',(IDD,Chantier,NArrivant,Ninduction,Date))
 	conn.commit()
+	con.close()
 
 	
 def add_TBM(IDD,Chantier,NChantier,NTBM,Date):
 	c.execute('INSERT INTO TBM(IDD,Chantier,NChantier,NTBM,Date) VALUES (?,?,?,?,?)',(IDD,Chantier,NChantier,NTBM,Date))
-	conn.commit()	
+	conn.commit()
+	con.close()
 
 	
 def add_NC(IDD,Chantier,NCR,FNCR,NCC,FNCC,Date):
 	c.execute('INSERT INTO NC(IDD,Chantier,NCR,FNCR,NCC,FNCC,Date) VALUES (?,?,?,?,?,?,?)',(IDD,Chantier,NCR,FNCR,NCC,FNCC,Date))
-	conn.commit()	
+	conn.commit()
+	con.close()
 
 
 def add_Changements(IDD,Chantier,NCH,FNCH,NCHC,FNCHC,Date):
 	c.execute('INSERT INTO Changements(IDD,Chantier,NCH,FNCH,NCHC,FNCHC,Date) VALUES (?,?,?,?,?,?,?)',(IDD,Chantier,NCH,FNCH,NCHC,FNCHC,Date))
-	conn.commit()	
+	conn.commit()
+	con.close()
 
 	
 def add_Anomalies(IDD,Chantier,NA,FNA,NAC,FNAC,Date):
 	c.execute('INSERT INTO Anomalies(IDD,Chantier,NA,FNA,NAC,FNAC,Date) VALUES (?,?,?,?,?,?,?)',(IDD,Chantier,NA,FNA,NAC,FNAC,Date))
-	conn.commit()	
+	conn.commit()
+	con.close()
 
 
 def add_JSA(IDD,Chantier,NAct,NJSA,Date):
 	c.execute('INSERT INTO JSA(IDD,Chantier,NAct,NJSA,Date) VALUES (?,?,?,?,?)',(IDD,Chantier,NAct,NJSA,Date))
 	conn.commit()
+	con.close()
 
 	
 def add_Incident_Accident(IDD,Chantier,NInc,AAA,ASA,AT,NJP,Date):
 	c.execute('INSERT INTO Incident_Accident(IDD,Chantier,NInc,AAA,ASA,AT,NJP,Date) VALUES (?,?,?,?,?,?,?,?)',(IDD,Chantier,NInc,AAA,ASA,AT,NJP,Date))
 	conn.commit()
+	con.close()
 
 	
 def add_Audit(IDD,Chantier,AC,VC,NEU,SMPAR,NPR,IE,Date):
 	c.execute('INSERT INTO Audit(IDD,Chantier,AC,VC,NEU,SMPAR,NPR,IE,Date) VALUES (?,?,?,?,?,?,?,?,?)',(IDD,Chantier,AC,VC,NEU,SMPAR,NPR,IE,Date))
 	conn.commit()
+	con.close()
 	
 #=========================================================================================	
 # Security
