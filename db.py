@@ -4,11 +4,11 @@ import psycopg2
 from sqlalchemy import create_engine
 
 #Creating PostgreSQL client
-con = psycopg2.connect('postgres://djmyopoxfiezbi:95b9b8b93a1fabe0440e3d31ffcb6077f55fd04e0ee6061d0c2c5776adc52f89@ec2-35-170-85-206.compute-1.amazonaws.com:5432/dcbt0lh9gd4o55')
-c = con.cursor()
+#con = psycopg2.connect('postgres://djmyopoxfiezbi:95b9b8b93a1fabe0440e3d31ffcb6077f55fd04e0ee6061d0c2c5776adc52f89@ec2-35-170-85-206.compute-1.amazonaws.com:5432/dcbt0lh9gd4o55')
+#c = con.cursor()
 
 import psycopg2
-from config import config
+
 
 
 def create_table():
@@ -45,7 +45,7 @@ def create_table():
 		# read the connection parameters
 		params = config()
 		# connect to the PostgreSQL server
-		conn = psycopg2.connect(**params)
+		conn = psycopg2.connect('postgres://djmyopoxfiezbi:95b9b8b93a1fabe0440e3d31ffcb6077f55fd04e0ee6061d0c2c5776adc52f89@ec2-35-170-85-206.compute-1.amazonaws.com:5432/dcbt0lh9gd4o55')
 		c = conn.cursor()
 		# create table one by one
 		for command in commands:
