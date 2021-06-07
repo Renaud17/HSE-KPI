@@ -2,8 +2,9 @@ import streamlit as st
 import psycopg2
 from sqlalchemy import create_engine
 
-conn = create_engine(postgres://djmyopoxfiezbi:95b9b8b93a1fabe0440e3d31ffcb6077f55fd04e0ee6061d0c2c5776adc52f89@ec2-35-170-85-206.compute-1.amazonaws.com:5432/dcbt0lh9gd4o55, echo = False)
-c = conn
+DATABASE_URL = os.environ.get('postgres://djmyopoxfiezbi:95b9b8b93a1fabe0440e3d31ffcb6077f55fd04e0ee6061d0c2c5776adc52f89@ec2-35-170-85-206.compute-1.amazonaws.com:5432/dcbt0lh9gd4o55')
+con = psycopg2.connect(DATABASE_URL)
+c = con.cursor()
 #=================================	
 
 	
