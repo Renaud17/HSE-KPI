@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import psycopg2
 from sqlalchemy import create_engine
