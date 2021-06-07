@@ -4,10 +4,8 @@ import psycopg2
 from sqlalchemy import create_engine
 
 #Creating PostgreSQL client
-#con = psycopg2.connect('postgres://djmyopoxfiezbi:95b9b8b93a1fabe0440e3d31ffcb6077f55fd04e0ee6061d0c2c5776adc52f89@ec2-35-170-85-206.compute-1.amazonaws.com:5432/dcbt0lh9gd4o55')
-#c = con.cursor()
-#Creating PostgreSQL client
-c = create_engine('postgres://djmyopoxfiezbi:95b9b8b93a1fabe0440e3d31ffcb6077f55fd04e0ee6061d0c2c5776adc52f89@ec2-35-170-85-206.compute-1.amazonaws.com:5432/dcbt0lh9gd4o55')
+con = psycopg2.connect('postgres://djmyopoxfiezbi:95b9b8b93a1fabe0440e3d31ffcb6077f55fd04e0ee6061d0c2c5776adc52f89@ec2-35-170-85-206.compute-1.amazonaws.com:5432/dcbt0lh9gd4o55')
+c = con.cursor()
 
 def create_table():
     c.execute('CREATE TABLE IF NOT EXISTS userstable(id INTEGER PRIMARY KEY AUTOINCREMENT,email TEXT UNIQUE,password TEXT)')
