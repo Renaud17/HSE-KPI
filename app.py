@@ -44,13 +44,15 @@ def inputcheck(inputext):
     return inputext
 
 
-# DB Management
-import psycopg2
 # Initialize connection. 
 # Uses st.cache to only run once. 
 @st.cache(allow_output_mutation=True, hash_funcs={"_thread.RLock": lambda _: None})
 def init_connection():
-    return psycopg2.connect(**st.secrets["postgres"])
+    return psycopg2.connect(host = "ec2-35-170-85-206.compute-1.amazonaws.com",
+			    port = 5432,
+			    dbname = "dcbt0lh9gd4o55",
+			    user = "djmyopoxfiezbi",
+			    password = "95b9b8b93a1fabe0440e3d31ffcb6077f55fd04e0ee6061d0c2c5776adc52f89")
 
 conn = init_connection()
 #conn = sqlite3.connect('data.db', check_same_thread=False)
