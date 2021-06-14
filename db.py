@@ -89,10 +89,9 @@ def check_hashes(password,hashed_text):
 def add_userdata(email,password):
     #J'utilise try et except pour chancger le message d'erreur de la base de donnée
     try:
-        c.execute('INSERT INTO userstable(email,password) VALUES (?,?)',(email,password))
+        c.execute('INSERT INTO userstable(email,password) VALUES (?,?)ON CONFLICT DO NOTHING',(email,password))
         conn.commit()
     except:
-	conn.rollback()
         st.error("Cet email est déjà utilisé")
         st.stop()
 	
