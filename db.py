@@ -14,10 +14,8 @@ def init_connection():
 
 conn = init_connection()
 #conn = sqlite3.connect('data.db', check_same_thread=False)
-def run_query(query):
-    with conn.cursor() as c:
-        c.execute(query)
-        return c.fetchall()
+c=conn.cursor()
+      
 
 def create_table():
     c.execute('CREATE TABLE IF NOT EXISTS userstable(id SERIAL PRIMARY KEY,email TEXT UNIQUE,password TEXT)')
