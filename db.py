@@ -17,59 +17,53 @@ conn = init_connection()
 c=conn.cursor()
 
 def create_table():
-    c.execute('CREATE TABLE  userstable(id INTEGER,email TEXT UNIQUE,password TEXT,PRIMARY KEY (id))')
-    c.execute('CREATE TABLE  Accueil(id INTEGER,IDD TEXT,Chantier TEXT,NArrivant VARCHAR,Ninduction VARCHAR,Date DATE,PRIMARY KEY (id))')
-    c.execute('CREATE TABLE  TBM(id INTEGER,IDD TEXT,Chantier TEXT,NChantier VARCHAR,NTBM VARCHAR,Date DATE,PRIMARY KEY (id))')
-    c.execute('CREATE TABLE  NC(id INTEGER,IDD TEXT,Chantier TEXT,NCR VARCHAR,FNCR VARCHAR,NCC VARCHAR,FNCC VARCHAR,Date DATE,PRIMARY KEY (id))')
-    c.execute('CREATE TABLE  Changements(id INTEGER,IDD TEXT,Chantier TEXT,NCH VARCHAR,FNCH VARCHAR,NCHC VARCHAR,FNCHC VARCHAR,Date DATE,PRIMARY KEY (id))')
-    c.execute('CREATE TABLE  Anomalies(id INTEGER,IDD TEXT,Chantier TEXT,NA VARCHAR,FNA VARCHAR,NAC VARCHAR,FNAC VARCHAR,Date DATE,PRIMARY KEY (id))')
-    c.execute('CREATE TABLE  JSA(id INTEGER,IDD TEXT,Chantier TEXT,NAct VARCHAR,NJSA VARCHAR,Date DATE,PRIMARY KEY (id))')
-    c.execute('CREATE TABLE  Incident_Accident(id INTEGER,IDD TEXT,Chantier TEXT,NInc VARCHAR,AAA VARCHAR,ASA VARCHAR,AT VARCHAR,NJP VARCHAR,Date DATE,PRIMARY KEY (id))')
-    c.execute('CREATE TABLE  Audit(id INTEGER,IDD TEXT,Chantier TEXT,AC VARCHAR,VC VARCHAR,NEU VARCHAR,SMPAR VARCHAR,NPR VARCHAR,IE VARCHAR,Date DATE,PRIMARY KEY (id))')
+	CREATE TABLE  userstable(id INTEGER,email TEXT UNIQUE,password TEXT,PRIMARY KEY (id));
+	CREATE TABLE  Accueil(id INTEGER,IDD TEXT,Chantier TEXT,NArrivant VARCHAR,Ninduction VARCHAR,Date DATE,PRIMARY KEY (id));
+	CREATE TABLE  TBM(id INTEGER,IDD TEXT,Chantier TEXT,NChantier VARCHAR,NTBM VARCHAR,Date DATE,PRIMARY KEY (id));
+	CREATE TABLE  NC(id INTEGER,IDD TEXT,Chantier TEXT,NCR VARCHAR,FNCR VARCHAR,NCC VARCHAR,FNCC VARCHAR,Date DATE,PRIMARY KEY (id));
+	CREATE TABLE  Changements(id INTEGER,IDD TEXT,Chantier TEXT,NCH VARCHAR,FNCH VARCHAR,NCHC VARCHAR,FNCHC VARCHAR,Date DATE,PRIMARY KEY (id));
+	CREATE TABLE  Anomalies(id INTEGER,IDD TEXT,Chantier TEXT,NA VARCHAR,FNA VARCHAR,NAC VARCHAR,FNAC VARCHAR,Date DATE,PRIMARY KEY (id));
+	CREATE TABLE  JSA(id INTEGER,IDD TEXT,Chantier TEXT,NAct VARCHAR,NJSA VARCHAR,Date DATE,PRIMARY KEY (id));
+	CREATE TABLE  Incident_Accident(id INTEGER,IDD TEXT,Chantier TEXT,NInc VARCHAR,AAA VARCHAR,ASA VARCHAR,AT VARCHAR,NJP VARCHAR,Date DATE,PRIMARY KEY (id));
+	CREATE TABLE  Audit(id INTEGER,IDD TEXT,Chantier TEXT,AC VARCHAR,VC VARCHAR,NEU VARCHAR,SMPAR VARCHAR,NPR VARCHAR,IE VARCHAR,Date DATE,PRIMARY KEY (id));
 	
 #email,password,	
 #========================================================
 # les donné que nous souhaitons récupré
 
 def add_Accueil(IDD,Chantier,NArrivant,Ninduction,Date):
-	c.execute('INSERT INTO Accueil(IDD,Chantier,NArrivant,Ninduction,Date) VALUES (?,?,?,?,?)',(IDD,Chantier,NArrivant,Ninduction,Date))
-	conn.commit()
+	INSERT INTO Accueil(IDD,Chantier,NArrivant,Ninduction,Date) VALUES (?,?,?,?,?)',(IDD,Chantier,NArrivant,Ninduction,Date);
 
 	
 def add_TBM(IDD,Chantier,NChantier,NTBM,Date):
-	c.execute('INSERT INTO TBM(IDD,Chantier,NChantier,NTBM,Date) VALUES (?,?,?,?,?)',(IDD,Chantier,NChantier,NTBM,Date))
-	conn.commit()	
+	INSERT INTO TBM(IDD,Chantier,NChantier,NTBM,Date) VALUES (?,?,?,?,?)',(IDD,Chantier,NChantier,NTBM,Date);
+		
 
 	
 def add_NC(IDD,Chantier,NCR,FNCR,NCC,FNCC,Date):
-	c.execute('INSERT INTO NC(IDD,Chantier,NCR,FNCR,NCC,FNCC,Date) VALUES (?,?,?,?,?,?,?)',(IDD,Chantier,NCR,FNCR,NCC,FNCC,Date))
-	conn.commit()	
+	INSERT INTO NC(IDD,Chantier,NCR,FNCR,NCC,FNCC,Date) VALUES (?,?,?,?,?,?,?)',(IDD,Chantier,NCR,FNCR,NCC,FNCC,Date);
+		
 
 
 def add_Changements(IDD,Chantier,NCH,FNCH,NCHC,FNCHC,Date):
-	c.execute('INSERT INTO Changements(IDD,Chantier,NCH,FNCH,NCHC,FNCHC,Date) VALUES (?,?,?,?,?,?,?)',(IDD,Chantier,NCH,FNCH,NCHC,FNCHC,Date))
-	conn.commit()	
+	INSERT INTO Changements(IDD,Chantier,NCH,FNCH,NCHC,FNCHC,Date) VALUES (?,?,?,?,?,?,?)',(IDD,Chantier,NCH,FNCH,NCHC,FNCHC,Date);
+		
 
 	
 def add_Anomalies(IDD,Chantier,NA,FNA,NAC,FNAC,Date):
-	c.execute('INSERT INTO Anomalies(IDD,Chantier,NA,FNA,NAC,FNAC,Date) VALUES (?,?,?,?,?,?,?)',(IDD,Chantier,NA,FNA,NAC,FNAC,Date))
-	conn.commit()	
+	INSERT INTO Anomalies(IDD,Chantier,NA,FNA,NAC,FNAC,Date) VALUES (?,?,?,?,?,?,?)',(IDD,Chantier,NA,FNA,NAC,FNAC,Date);	
 
 
 def add_JSA(IDD,Chantier,NAct,NJSA,Date):
-	c.execute('INSERT INTO JSA(IDD,Chantier,NAct,NJSA,Date) VALUES (?,?,?,?,?)',(IDD,Chantier,NAct,NJSA,Date))
-	conn.commit()
+	INSERT INTO JSA(IDD,Chantier,NAct,NJSA,Date) VALUES (?,?,?,?,?)',(IDD,Chantier,NAct,NJSA,Date);
 
 	
 def add_Incident_Accident(IDD,Chantier,NInc,AAA,ASA,AT,NJP,Date):
-	c.execute('INSERT INTO Incident_Accident(IDD,Chantier,NInc,AAA,ASA,AT,NJP,Date) VALUES (?,?,?,?,?,?,?,?)',(IDD,Chantier,NInc,AAA,ASA,AT,NJP,Date))
-	conn.commit()
+	INSERT INTO Incident_Accident(IDD,Chantier,NInc,AAA,ASA,AT,NJP,Date) VALUES (?,?,?,?,?,?,?,?)',(IDD,Chantier,NInc,AAA,ASA,AT,NJP,Date);
 
 	
 def add_Audit(IDD,Chantier,AC,VC,NEU,SMPAR,NPR,IE,Date):
-	c.execute('INSERT INTO Audit(IDD,Chantier,AC,VC,NEU,SMPAR,NPR,IE,Date) VALUES (?,?,?,?,?,?,?,?,?)',(IDD,Chantier,AC,VC,NEU,SMPAR,NPR,IE,Date))
-	conn.commit()
-	
+	INSERT INTO Audit(IDD,Chantier,AC,VC,NEU,SMPAR,NPR,IE,Date) VALUES (?,?,?,?,?,?,?,?,?)',(IDD,Chantier,AC,VC,NEU,SMPAR,NPR,IE,Date);
 #=========================================================================================	
 # Security
 #passlib,hashlib,bcrypt,scrypt
@@ -89,8 +83,7 @@ def check_hashes(password,hashed_text):
 def add_userdata(email,password):
     #J'utilise try et except pour chancger le message d'erreur de la base de donnée
     try:
-        c.execute('INSERT INTO userstable(email,password) VALUES (?,?)',(email,password))
-        conn.commit()
+        INSERT INTO userstable(email,password) VALUES (?,?)',(email,password);
     except:
         st.error("Cet email est déjà utilisé")
         st.stop()
