@@ -1,4 +1,4 @@
-psycopg2
+psycopg2-binary
 sqlalchemy 
 matplotlib==3.2.2
 numpy==1.19.3
