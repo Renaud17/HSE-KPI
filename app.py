@@ -45,8 +45,15 @@ def inputcheck(inputext):
 
 
 # DB Management
-import sqlite3
-conn = sqlite3.connect('data.db')
+import psycopg2
+# Initialize connection. 
+# Uses st.cache to only run once. 
+@st.cache(allow_output_mutation=True, hash_funcs={"_thread.RLock": lambda _: None})
+def init_connection():
+    return psycopg2.connect(**st.secrets["postgres"])
+
+conn = init_connection()
+#conn = sqlite3.connect('data.db', check_same_thread=False)
 c = conn.cursor()
 
 
