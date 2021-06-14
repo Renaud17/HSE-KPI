@@ -5,6 +5,7 @@ import streamlit as st
 import pandas as pd
 import datetime
 import re
+import psycopg2
 import base64
 from datetime import datetime,date
 from datetime import datetime, timedelta
