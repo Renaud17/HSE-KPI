@@ -2,7 +2,7 @@ import streamlit as st
 import sqlite3
 
 
-conn = sqlite3.connect('data.db', check_same_thread=False)
+conn = sqlite3.connect('https://drive.google.com/file/d/1FgIto_DONZCWuI_FEX7AunCKsFE6voxT/view?usp=sharing', check_same_thread=False)
 c = conn.cursor()
 #=================================	
 
