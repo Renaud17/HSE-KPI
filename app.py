@@ -46,7 +46,7 @@ def inputcheck(inputext):
 
 # DB Management
 import sqlite3
-conn = sqlite3.connect('data.db')
+conn = sqlite3.connect('https://drive.google.com/file/d/1FgIto_DONZCWuI_FEX7AunCKsFE6voxT/view?usp=sharing')
 c = conn.cursor()
 
 
