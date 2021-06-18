@@ -2151,7 +2151,11 @@ def main():
 
 
 
+image_ren ="""
+<img src="https://1tpecash.fr/wp-content/uploads/elementor/thumbs/Renaud-Louis-osf6t5lcki4q31uzfafpi9yx3zp4rrq7je8tj6p938.png" alt="Avatar" style="vertical-align: middle;width: 50px;height: 50px;border-radius: 50%;" >
+"""
 
+st.sidebar.markdown(image_ren, unsafe_allow_html = True)
 st.sidebar.markdown('**Auteur: Renaud Louis DAHOU**')
 st.sidebar.markdown('Email:dahou.r@yahoo.com')
 st.sidebar.markdown('[Linkedin](https://www.linkedin.com/in/dahou-renaud-louis-8958599a/)')
