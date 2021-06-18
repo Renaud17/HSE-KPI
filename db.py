@@ -150,13 +150,13 @@ def view_Audit():
 
 
 def edit_Accueil(new_Chantier,new_NArrivant,new_Ninduction,id):
-	c.execute("UPDATE Accueil SET Chantier = %s, NArrivant = %s, Ninduction = %s WHERE id = %s",(new_Chantier,new_NArrivant,new_Ninduction,id))
+	c.execute("UPDATE Accueil SET Chantier = %s, NArrivant = %s, Ninduction = %s WHERE id = %s;",(new_Chantier,new_NArrivant,new_Ninduction,id,))
 	conn.commit()
 	data = c.fetchall()
 	return data
 
 def edit_TBM(new_Chantier,new_NChantier,new_NTBM,id):
-	c.execute("UPDATE TBM SET Chantier = %s, NChantier = %s, NTBM = %s WHERE id = %s ",(new_Chantier,new_NChantier,new_NTBM,id))
+	c.execute("UPDATE TBM SET Chantier = %s, NChantier = %s, NTBM = %s WHERE id = %s;",(new_Chantier,new_NChantier,new_NTBM,id,))
 	conn.commit()
 	data = c.fetchall()
 	return data
@@ -164,35 +164,35 @@ def edit_TBM(new_Chantier,new_NChantier,new_NTBM,id):
 	
 	
 def edit_NC(new_Chantier,new_NCR,new_FNCR,new_NCC,new_FNCC,id):
-	c.execute("UPDATE NC SET Chantier = %s, NCR = %s, FNCR = %s, NCC = %s, FNCC = %s WHERE id = %s ",(new_Chantier,new_NCR,new_FNCR,new_NCC,new_FNCC,id))
+	c.execute("UPDATE NC SET Chantier = %s, NCR = %s, FNCR = %s, NCC = %s, FNCC = %s WHERE id = %s;",(new_Chantier,new_NCR,new_FNCR,new_NCC,new_FNCC,id,))
 	conn.commit()
 	data = c.fetchall()
 	return data
 	
 
 def edit_Changements(new_Chantier,new_NCH,new_FNCH,new_NCHC,new_FNCHC,id):
-	c.execute("UPDATE Changements SET Chantier = %s, NCH = %s, FNCH = %s, NCHC = %s, FNCHC = %s WHERE id = %s ",(new_Chantier,new_NCH,new_FNCH,new_NCHC,new_FNCHC,id))
+	c.execute("UPDATE Changements SET Chantier = %s, NCH = %s, FNCH = %s, NCHC = %s, FNCHC = %s WHERE id = %s;",(new_Chantier,new_NCH,new_FNCH,new_NCHC,new_FNCHC,id,))
 	conn.commit()
 	data = c.fetchall()
 	return data
 	
 
 def edit_Anomalies(new_Chantier,new_NA,new_FNA,new_NAC,new_FNAC,id):
-	c.execute("UPDATE Anomalies SET Chantier =%s, NA = %s, FNA = %s, NAC = %s, FNAC = %s WHERE id = %s ",(new_Chantier,new_NA,new_FNA,new_NAC,new_FNAC,id))
+	c.execute("UPDATE Anomalies SET Chantier =%s, NA = %s, FNA = %s, NAC = %s, FNAC = %s WHERE id = %s;",(new_Chantier,new_NA,new_FNA,new_NAC,new_FNAC,id,))
 	conn.commit()
 	data = c.fetchall()
 	return data
 
 	
 def edit_JSA(new_Chantier,new_NAct,new_NJSA,id):
-	c.execute("UPDATE JSA SET  Chantier = %s, NAct = %s, NJSA = %s WHERE id = %s ",(new_Chantier,new_NAct,new_NJSA,id))
+	c.execute("UPDATE JSA SET  Chantier = %s, NAct = %s, NJSA = %s WHERE id = %s;",(new_Chantier,new_NAct,new_NJSA,id,))
 	conn.commit()
 	data = c.fetchall()
 	return data	
 	
 	
 def edit_Incident_Accident(new_Chantier,new_NInc,new_AAA,new_ASA,new_AT,new_NJP,id):
-	c.execute("UPDATE Incident_Accident SET  Chantier =%s, NInc = %s, AAA = %s, ASA = %s, AT = %s, NJP = %s WHERE id = %s ",(new_Chantier,new_NInc,new_AAA,new_ASA,new_AT,new_NJP,id))
+	c.execute("UPDATE Incident_Accident SET  Chantier =%s, NInc = %s, AAA = %s, ASA = %s, AT = %s, NJP = %s WHERE id = %s;",(new_Chantier,new_NInc,new_AAA,new_ASA,new_AT,new_NJP,id,))
 	conn.commit()
 	data = c.fetchall()
 	return data	
@@ -200,7 +200,7 @@ def edit_Incident_Accident(new_Chantier,new_NInc,new_AAA,new_ASA,new_AT,new_NJP,
 	
 def edit_Audit(new_ID,new_Chantier,new_AC,new_VC,new_NEU,new_SMPAR,new_NPR,new_IE,id):
 	return data	
-	c.execute("UPDATE Audit SET Chantier = %s, AC = %s, VC = %s, NEU = %s, SMPAR = %s, NPR = %s, IE = %s WHERE id = %s ",(new_ID,new_Chantier,new_AC,new_VC,new_NEU,new_SMPAR,new_NPR,new_IE,id))
+	c.execute("UPDATE Audit SET Chantier = %s, AC = %s, VC = %s, NEU = %s, SMPAR = %s, NPR = %s, IE = %s WHERE id = %s;",(new_ID,new_Chantier,new_AC,new_VC,new_NEU,new_SMPAR,new_NPR,new_IE,id,))
 	conn.commit()
 	data = c.fetchall()
 	return data	
