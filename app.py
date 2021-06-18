@@ -211,20 +211,20 @@ def main():
 
 			<div class="mySlides fade">
 			  <div class="numbertext">1 / 3</div>
-			  <img src="https://cdn.shopify.com/s/files/1/2382/6729/products/SP124958.jpg?v=1536179866" style="width:100%">
+			  <img src="https://cdn.shopify.com/s/files/1/2382/6729/products/SP124958.jpg?v=1536179866" style="width:100%;border-radius:5px;">
 			  <div class="text"></div>
 			</div>
 
 			<div class="mySlides fade">
 			  <div class="numbertext">2 / 3</div>
 
-			  <img src="https://www.hsetrain.org/images/slide1.jpg" style="width:100%">
+			  <img src="https://www.hsetrain.org/images/slide1.jpg" style="width:100%;border-radius:5px;">
 			  <div class="text"></div>
 			</div>
 
 			<div class="mySlides fade">
 			  <div class="numbertext">3 / 3</div>
-			  <img src="https://www.spc.com.sg/wp-content/uploads/2015/11/banner-community-society-hse.jpg" style="width:100%">
+			  <img src="https://www.spc.com.sg/wp-content/uploads/2015/11/banner-community-society-hse.jpg" style="width:100%;border-radius:5px;">
 			  <div class="text"></div>
 			</div>
 
