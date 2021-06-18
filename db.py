@@ -209,38 +209,38 @@ def edit_Audit(new_ID,new_Chantier,new_AC,new_VC,new_NEU,new_SMPAR,new_NPR,new_I
 # delet
 
 def delete_data_Accueil(id):
-	c.execute('DELETE FROM Accueil WHERE id="{}"'.format(id))
+	c.execute('DELETE FROM Accueil WHERE id=%s',(id))
 	conn.commit()
 
 def delete_data_TBM(id):
-	c.execute('DELETE FROM TBM WHERE id="{}"'.format(id))
+	c.execute('DELETE FROM TBM WHERE id=%s',(id))
 	conn.commit()
 
 def delete_data_TBM(id):
-	c.execute('DELETE FROM TBM WHERE id="{}"'.format(id))
+	c.execute('DELETE FROM TBM WHERE id=%s',(id))
 	conn.commit()
 
 def delete_data_NC(id):
-	c.execute('DELETE FROM NC WHERE id="{}"'.format(id))
+	c.execute('DELETE FROM NC WHERE id=%s',(id))
 	conn.commit()
 
 def delete_data_Changements(id):
-	c.execute('DELETE FROM Changements WHERE id="{}"'.format(id))
+	c.execute('DELETE FROM Changements WHERE id=%s',(id))
 	conn.commit()
 
 def delete_data_Anomalies(id):
-	c.execute('DELETE FROM Anomalies WHERE id="{}"'.format(id))
+	c.execute('DELETE FROM Anomalies WHERE id=%s',(id))
 	conn.commit()
 
 def delete_data_JSA(id):
-	c.execute('DELETE FROM JSA WHERE id="{}"'.format(id))
+	c.execute('DELETE FROM JSA WHERE id=%s',(id))
 	conn.commit()
 
 def delete_data_Incident_Accident(id):
-	c.execute('DELETE FROM Incident_Accident WHERE id="{}"'.format(id))
+	c.execute('DELETE FROM Incident_Accident WHERE id=%s',(id))
 	conn.commit()
 
 
 def delete_data_Audit(id):
-	c.execute('DELETE FROM Audit WHERE id="{}"'.format(id))
+	c.execute('DELETE FROM Audit WHERE id=%s',(id))
 	conn.commit()
