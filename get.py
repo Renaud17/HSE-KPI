@@ -259,42 +259,42 @@ def get_IDD(IDD):
 
 # get_id =================================
 def get_id_Accueil(id):
-	c.execute('SELECT * FROM Accueil WHERE id=%s',(id))
+	c.execute('SELECT * FROM Accueil WHERE id=%s;',(id,))
 	data = c.fetchall()
 	return data	
 
 def get_id_TBM(id):
-	c.execute('SELECT * FROM TBM WHERE id=%s',(id))
+	c.execute('SELECT * FROM TBM WHERE id=%s;',(id,))
 	data = c.fetchall()
 	return data	
 
 def get_id_NC(id):
-	c.execute('SELECT * FROM NC WHERE id=%s',(id))
+	c.execute('SELECT * FROM NC WHERE id=%s;',(id,))
 	data = c.fetchall()
 	return data
 
 def get_id_Changements(id):
-	c.execute('SELECT * FROM Changements WHERE id=%s',(id))
+	c.execute('SELECT * FROM Changements WHERE id=%s;',(id,))
 	data = c.fetchall()
 	return data	
 
 def get_id_Anomalies(id):
-	c.execute('SELECT * FROM Anomalies WHERE id=%s',(id))
+	c.execute('SELECT * FROM Anomalies WHERE id=%s;',(id,))
 	data = c.fetchall()
 	return data
 
 def get_id_JSA(id):
-	c.execute('SELECT * FROM JSA WHERE id=%s',(id))
+	c.execute('SELECT * FROM JSA WHERE id=%s;',(id,))
 	data = c.fetchall()
 	return data
 
 def get_id_Incident_Accident(id):
-	c.execute('SELECT * FROM Incident_Accident WHERE id=%s',(id))
+	c.execute('SELECT * FROM Incident_Accident WHERE id=%s;',(id,))
 	data = c.fetchall()
 	return data
 
 def get_id_Audit(id):
-	c.execute('SELECT * FROM Audit WHERE id=%s',(id))
+	c.execute('SELECT * FROM Audit WHERE id=%s;',(id,))
 	data = c.fetchall()
 	return data
 
