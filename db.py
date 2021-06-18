@@ -3,7 +3,7 @@ import streamlit as st
 import psycopg2
 
 #conn = sqlite3.connect('data.db', check_same_thread=False)
-conn=psycopg2.connect("Database='d5ml0i8f3hkgdu' User='nhayouvhvbamum' Password='8f228697bceec9cd03609fddd27b608f43a777800ac1b6c8ebd46dbfd91ffc91' Host='ec2-52-4-111-46.compute-1.amazonaws.com' Port='5432' ")
+conn=psycopg2.connect("dbname='d5ml0i8f3hkgdu' user='nhayouvhvbamum' password='8f228697bceec9cd03609fddd27b608f43a777800ac1b6c8ebd46dbfd91ffc91' host='ec2-52-4-111-46.compute-1.amazonaws.com' port='5432' ")
 c = conn.cursor()
 
 def create_table():
