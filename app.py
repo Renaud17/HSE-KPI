@@ -285,9 +285,13 @@ def main():
 		"""
         #components.html(html_temp)
         st.markdown(html_temp, unsafe_allow_html = True)
+	image_BOT ="""
+<img src="https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G" >
+"""
         col1, col2, col3 = st.beta_columns([1,6,1])
         with col2:
-            st.image("https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G",width=400,)
+	    st.markdown(image_BOT, unsafe_allow_html = True)	
+            #st.image("https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G",width=400,)
         
 
         user_input = get_text()
