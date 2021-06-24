@@ -334,7 +334,7 @@ def main():
                     st.markdown(title_temp, unsafe_allow_html = True)
                     #st.markdown('### GESTION DES INDICATEURS HSE')
                     style()
-                    choix = st.selectbox("", ["AJOUTER", "AFFICHER", "METTRE À JOUR", "SUPPRIMER"])
+                    choix = st.checkbox("", ["AJOUTER", "AFFICHER", "METTRE À JOUR", "SUPPRIMER"])
                     if choix == "AJOUTER":
                         st.subheader("AJOUTER DES DONNÉES")
                         col1, col2= st.beta_columns(2)
