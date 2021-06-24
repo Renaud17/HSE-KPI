@@ -32,7 +32,7 @@ from nltk.corpus import stopwords
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.externals import joblib
+import joblib
 import json
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
