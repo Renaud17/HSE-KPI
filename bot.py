@@ -139,7 +139,7 @@ def bot_initialize(user_msg):
             resp = random.choice(responses[2]['response'])
             return resp
 
-@st.cache
+
 def get_text():
     user_input = st.text_input("Toi: ","Ecrivez ici")
     return user_input 
