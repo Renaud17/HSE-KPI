@@ -471,7 +471,7 @@ def main():
 
         user_input = get_text()
         response = bot_initialize(user_input)
-        st.empty("Bot:", value=response, height=200, max_chars=None, key=None)
+        st.text_area("Bot:", value=response, height=200, max_chars=None, key=None)
 
     elif choice == "Connexion":
         st.subheader("Section Connexion")
