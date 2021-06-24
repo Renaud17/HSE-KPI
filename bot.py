@@ -52,6 +52,7 @@ df = pd.DataFrame(data, columns = ["Text","Intent"])
 x = df['Text']
 y = df['Intent']
 X = vectorizer.fit_transform(x)
+eclf.fit(X, y)
 
 # To get responnse
 @st.cache(allow_output_mutation=True)
