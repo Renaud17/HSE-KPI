@@ -287,7 +287,7 @@ def main():
         st.markdown(html_temp, unsafe_allow_html = True)
         col1, col2, col3 = st.beta_columns([1,6,1])
         with col2:
-            st.image("https://i0.wp.com/www.aprentiv.com/wp-content/uploads/2017/04/Pr%C3%A9sentation-des-normes-dhygi%C3%A8ne-et-s%C3%A9curit%C3%A9-%C3%A0-respecter-en-entreprise.png",width=400,)
+            st.image("https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G",width=400,)
         
 
         user_input = get_text()
