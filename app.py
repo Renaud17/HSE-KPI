@@ -334,7 +334,7 @@ def main():
                     st.markdown(title_temp, unsafe_allow_html = True)
                     #st.markdown('### GESTION DES INDICATEURS HSE')
                     style()
-                    choix = st.checkbox("", ["AJOUTER", "AFFICHER", "METTRE À JOUR", "SUPPRIMER"])
+                    choix = st.multiselect("", ["AJOUTER", "AFFICHER", "METTRE À JOUR", "SUPPRIMER"])
                     if choix == "AJOUTER":
                         st.subheader("AJOUTER DES DONNÉES")
                         col1, col2= st.beta_columns(2)
@@ -342,7 +342,7 @@ def main():
                             st.subheader("CIBLE A ENREGISTRER")
                             
                             style()
-                            cible = st.multiselect('', ['Accueil sécurité','Briefing de sécurité( TBM)','Non conformité','Changements enregistrés','Anomalies','Analyse des risques réalisés(JSA)','Incident & Accident',"Audit-Inspection-Exercice d'urgence"])
+                            cible = st.selectbox('', ['Accueil sécurité','Briefing de sécurité( TBM)','Non conformité','Changements enregistrés','Anomalies','Analyse des risques réalisés(JSA)','Incident & Accident',"Audit-Inspection-Exercice d'urgence"])
                             #connexion à l'interface et recupération des données
                             if cible == 'Accueil sécurité':
                                 with col1:
