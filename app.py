@@ -15,7 +15,7 @@ import plotly.express as px
 from PIL import Image
 import streamlit.components.v1 as components
 from bot import *
-from response import *
+from responses import *
 
 
 
@@ -292,7 +292,7 @@ def main():
 
         user_input = get_text()
         response = bot_initialize(user_input)
-        st.text_area("Bot:", value=response, height=200, max_chars=None, key=None)
+        st.text_area("HSEBot:", value=response, height=200, max_chars=None, key=None)
 
     elif choice == "Connexion":
         st.subheader("Section Connexion")
