@@ -1,3 +1,4 @@
+ joblib
 nltk
 psycopg2
 sqlalchemy 
