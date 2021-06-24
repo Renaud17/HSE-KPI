@@ -26,16 +26,19 @@ from responses import *
 
 lemmer = nltk.stem.WordNetLemmatizer()
 
+@st.cache
 def LemTokens(tokens):
     return [lemmer.lemmatize(token) for token in tokens]
 
 remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)
 
+@st.cache
 def Normalize(text):
     return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
 
 vectorizer = TfidfVectorizer(tokenizer=Normalize,stop_words = stopwords.words('french'))
 
+@st.cache
 def load_doc(jsonFile):
     with open(jsonFile) as file:
         Json_data = json.loads(file.read())
@@ -51,7 +54,7 @@ y = df['Intent']
 X = vectorizer.fit_transform(x)
 
 # To get responnse
-
+@st.cache
 def response(user_input):
     text_test = [user_input]
     X_test = vectorizer.transform(text_test)
@@ -60,6 +63,7 @@ def response(user_input):
     return reply
 
 # To get indent
+@st.cache
 def intent(user_input):
     text_intent = [user_input]
     X_test_intent = vectorizer.transform(text_intent)
@@ -69,7 +73,7 @@ def intent(user_input):
 
 
 
-
+@st.cache
 def bot_initialize(user_msg):
     flag=True
     while(flag==True):
@@ -135,6 +139,7 @@ def bot_initialize(user_msg):
             resp = random.choice(responses[2]['response'])
             return resp
 
+@st.cache
 def get_text():
     user_input = st.text_input("Toi: ","Ecrivez ici")
     return user_input 
