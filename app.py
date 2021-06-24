@@ -16,7 +16,7 @@ from PIL import Image
 import streamlit.components.v1 as components
 from bot import *
 from responses import *
-from bot import get_text
+from bot import LemTokens,Normalize,Normalize,get_text,load_doc,intent,response,intent,bot_initialize
 
 
 
