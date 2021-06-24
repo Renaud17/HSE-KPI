@@ -281,7 +281,7 @@ def main():
         html_temp = """
 		<div style="background-color:#464e5f;padding:10px;border-radius:10px;margin:3px;">
 		<h2 style="font-family: 'BadaBoom BB', sans-serif;color:white;text-align:center;"><b>HSE KPI RECORDER</b></h2>
-		<h3 style="color:white;text-align:center;">Application d'analyse et de suivi des indicateurs de performance HSE doté d'une intelligence artificielle pour identifier et prevenir les risques et dangers au travail.HSEBOT👇👇👇</h3>
+		<p style="color:white;text-align:justify">Application d'analyse et de suivi des indicateurs de performance HSE doté d'une intelligence artificielle pour identifier et prevenir les risques et dangers au travail.HSEBOT👇👇👇</p>
 		</div>
 		"""
         #components.html(html_temp)
