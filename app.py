@@ -279,7 +279,7 @@ def main():
 			""")
         html_temp = """
 		<div style="background-color:#464e5f;padding:10px;border-radius:10px;margin:3px;">
-		<h2 style="color:white;text-align:center;"><b>HSE KPI RECORDER</b></h2>
+		<h2 style="font-family: 'BadaBoom BB', sans-serif;color:white;text-align:center;"><b>HSE KPI RECORDER</b></h2>
 		<h3 style="color:white;text-align:center;">Application d'analyse et de suivi des indicateurs de performance HSE</h3>
 		</div>
 		"""
