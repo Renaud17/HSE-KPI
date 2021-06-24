@@ -342,7 +342,7 @@ def main():
                             st.subheader("CIBLE A ENREGISTRER")
                             
                             style()
-                            cible = st.selectbox('', ['Accueil sécurité','Briefing de sécurité( TBM)','Non conformité','Changements enregistrés','Anomalies','Analyse des risques réalisés(JSA)','Incident & Accident',"Audit-Inspection-Exercice d'urgence"])
+                            cible = st.multiselect('', ['Accueil sécurité','Briefing de sécurité( TBM)','Non conformité','Changements enregistrés','Anomalies','Analyse des risques réalisés(JSA)','Incident & Accident',"Audit-Inspection-Exercice d'urgence"])
                             #connexion à l'interface et recupération des données
                             if cible == 'Accueil sécurité':
                                 with col1:
