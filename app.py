@@ -16,6 +16,7 @@ from PIL import Image
 import streamlit.components.v1 as components
 from bot import *
 from responses import *
+from bot import get_text
 
 
 
