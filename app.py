@@ -21,7 +21,7 @@ from bot import get_text
 
 
 
-@st.cache
+@st.cache(allow_output_mutation=True)
 def to_excel(df):
     output = BytesIO()
     writer = pd.ExcelWriter(output, engine='xlsxwriter')
@@ -29,7 +29,7 @@ def to_excel(df):
     writer.save()
     processed_data = output.getvalue()
     return processed_data
-@st.cache
+@st.cache(allow_output_mutation=True)
 def get_table_download_link(df):
     """Generates a link allowing the data in a given panda dataframe to be downloaded
     in:  dataframe
@@ -40,7 +40,7 @@ def get_table_download_link(df):
     return f'<a href="data:application/octet-stream;base64,{b64.decode()}" download="extract.xlsx">Votre fichier excel</a>' # decode b'abc' => abc
 
 #pour verifier le type d'entrée
-@st.cache
+@st.cache(allow_output_mutation=True)
 def inputcheck(inputext):
     try:
         inputext = int(inputext)
@@ -64,11 +64,11 @@ c = conn.cursor()
 # Security
 #passlib,hashlib,bcrypt,scrypt
 import hashlib
-@st.cache
+@st.cache(allow_output_mutation=True)
 def make_hashes(password):
     return hashlib.sha256(str.encode(password)).hexdigest()
 
-@st.cache
+@st.cache(allow_output_mutation=True)
 def check_hashes(password,hashed_text):
     if make_hashes(password) == hashed_text:
         return hashed_text
