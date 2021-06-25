@@ -14,9 +14,8 @@ import xlsxwriter
 import plotly.express as px
 from PIL import Image
 import streamlit.components.v1 as components
-from bot import *
 from responses import *
-from bot import LemTokens,Normalize,Normalize,get_text,load_doc,intent,response,intent,bot_initialize
+
 
 
 
@@ -294,11 +293,13 @@ def main():
         with col2:
             st.markdown(image_BOT, unsafe_allow_html = True)	
             #st.image("https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G",width=400,)
-        
-
-        user_input = get_text()
-        response = bot_initialize(user_input)
-        st.text_area("HSEBot:", value=response, height=200, max_chars=None, key=None)
+	buttonbot=st.button("Démmarer BOTHSE")
+	if buttonbot:
+	    from bot import *
+	    from bot import LemTokens,Normalize,Normalize,get_text,load_doc,intent,response,intent,bot_initialize
+	    user_input = get_text()
+	    response = bot_initialize(user_input)
+	    st.text_area("HSEBot:", value=response, height=200, max_chars=None, key=None)
 
     elif choice == "Connexion":
         st.subheader("Section Connexion")
@@ -2179,4 +2180,3 @@ st.sidebar.markdown('[Linkedin](https://www.linkedin.com/in/dahou-renaud-louis-8
 
 if __name__ == '__main__':
     main()
-from telebothse import *
