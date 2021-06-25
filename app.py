@@ -295,10 +295,7 @@ def main():
         with col2:
             st.markdown(image_BOT, unsafe_allow_html = True)	
             #st.image("https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G",width=400,)
-            col1, col2, col3 = st.beta_columns([1,6,1])
-            with col2:
-                buttonbot=st.button("Démmarer HSEBOT")
-        if buttonbot:
+            
             user_input = get_text()
             response = bot_initialize(user_input)
             st.text_area("HSEBot:", value=response, height=200, max_chars=None, key=None)
