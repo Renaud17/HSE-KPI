@@ -288,10 +288,10 @@ def main():
         #components.html(html_temp)
         st.markdown(html_temp, unsafe_allow_html = True)
         image_BOT = """
-		<img src="https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G" style="width: 200px;">
+		<center><img src="https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G"  alt="HSEBOT" height="150" width="200"></center>
 		"""
         
-        col1, col2, col3 = st.beta_columns([1,6,1])
+        col1, col2, col3 , col4, col5 = st.beta_columns(5)
         with col3:
             st.markdown(image_BOT, unsafe_allow_html = True)	
             #st.image("https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G",width=400,)
