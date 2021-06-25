@@ -292,7 +292,7 @@ def main():
 		"""
         
         col1, col2, col3 = st.beta_columns([1,6,1])
-        with col2:
+        with col3:
             st.markdown(image_BOT, unsafe_allow_html = True)	
             #st.image("https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G",width=400,)
             buttonbot=st.button("Démmarer HSEBOT")
