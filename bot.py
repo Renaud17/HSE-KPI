@@ -45,7 +45,7 @@ def load_doc(jsonFile):
     return Json_data
 
 
-#data = load_doc('data.json')
+data = load_doc('data.json')
 book = load_doc('book.json')
 eclf= joblib.load('eclf.pkl')
 X= joblib.load('X.pkl')
