@@ -51,8 +51,7 @@ eclf= joblib.load('eclf.pkl')
 df = pd.DataFrame(data, columns = ["Text","Intent"])
 x = df['Text']
 y= df['Intent']
-vectorizer.fit_transform(x)
-#X= vectorizer.fit_transform(x)
+X= vectorizer.fit_transform(x)
 #eclf.fit(X, y)
 
 # To get responnse
