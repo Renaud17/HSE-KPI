@@ -41,7 +41,6 @@ def get_table_download_link(df):
     return f'<a href="data:application/octet-stream;base64,{b64.decode()}" download="extract.xlsx">Votre fichier excel</a>' # decode b'abc' => abc
 
 #pour verifier le type d'entrée
-@st.cache(allow_output_mutation=True)
 def inputcheck(inputext):
     try:
         inputext = int(inputext)
