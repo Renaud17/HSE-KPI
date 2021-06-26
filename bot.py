@@ -45,14 +45,15 @@ def load_doc(jsonFile):
     return Json_data
 
 
-data = load_doc('data.json')
+#data = load_doc('data.json')
 book = load_doc('book.json')
 eclf= joblib.load('eclf.pkl')
-df = pd.DataFrame(data, columns = ["Text","Intent"])
-x = df['Text']
-y = df['Intent']
-X = vectorizer.fit_transform(x)
-eclf.fit(X, y)
+X= joblib.load('X.pkl')
+#df = pd.DataFrame(data, columns = ["Text","Intent"])
+#x = df['Text']
+#y = df['Intent']
+# X= vectorizer.fit_transform(x)
+#eclf.fit(X, y)
 
 # To get responnse
 @st.cache(allow_output_mutation=True)
