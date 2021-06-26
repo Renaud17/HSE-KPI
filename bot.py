@@ -19,6 +19,8 @@ import joblib
 import json
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.naive_bayes import MultinomialNB
 from sklearn.ensemble import VotingClassifier
 from sklearn.model_selection import GridSearchCV
 from responses import *
