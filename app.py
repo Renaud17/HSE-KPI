@@ -106,7 +106,7 @@ def main():
     """
     st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
-    menu = ["Accueil", "Connexion", "Inscription"]
+    menu = ["Accueil", "Connexion"] #, "Inscription"
     choice = st.sidebar.selectbox("Menu",menu)
 
     if choice == "Accueil":
