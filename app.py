@@ -284,10 +284,11 @@ def main():
 		<p style="color:white;text-align:justify">Application d'analyse et de suivi des indicateurs de performance HSE dotée d'une intelligence artificielle pour identifier et prevenir les risques et dangers au travail. Débutez une conversation avec HSEBOT ici 👇👇👇</p>
 		</div>
 		"""
+	"""
         #components.html(html_temp)
         st.markdown(html_temp, unsafe_allow_html = True)
         image_BOT = """
-		<center><img src="https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G"  alt="HSEBOT" height="150" width="200"></center>
+		#<center><img src="https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G"  alt="HSEBOT" height="150" width="200"></center>
 		"""
         
         col1, col2, col3 = st.beta_columns([1,10,1])
@@ -298,6 +299,7 @@ def main():
             user_input = get_text()
             response = bot_initialize(user_input)
             st.text_area("HSEBot:", value=response, height=200, max_chars=None, key=None)
+	"""
 
     elif choice == "Connexion":
         st.subheader("Section Connexion")
