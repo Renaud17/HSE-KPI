@@ -284,7 +284,7 @@ def main():
 		<p style="color:white;text-align:justify">Application d'analyse et de suivi des indicateurs de performance HSE dotée d'une intelligence artificielle pour identifier et prevenir les risques et dangers au travail. Débutez une conversation avec HSEBOT ici 👇👇👇</p>
 		</div>
 		"""
-	"""
+	
         #components.html(html_temp)
         st.markdown(html_temp, unsafe_allow_html = True)
         image_BOT = """
@@ -299,7 +299,7 @@ def main():
             user_input = get_text()
             response = bot_initialize(user_input)
             st.text_area("HSEBot:", value=response, height=200, max_chars=None, key=None)
-	"""
+	
 
     elif choice == "Connexion":
         st.subheader("Section Connexion")
@@ -2177,6 +2177,7 @@ st.sidebar.markdown(image_ren, unsafe_allow_html = True)
 st.sidebar.markdown('**Auteur: Renaud Louis DAHOU**')
 st.sidebar.markdown('Email:dahou.r@yahoo.com')
 st.sidebar.markdown('[Linkedin](https://www.linkedin.com/in/dahou-renaud-louis-8958599a/)')
+st.sidebar.markdown('Pour tester HSE KPI RECORDER et faire des enregistrement, allez dans menu- connexion et mettez les informations de connexion:\nEmail:dahou.r@yahoo.com\nMot de passe:lyne18')
 
 if __name__ == '__main__':
     main()
