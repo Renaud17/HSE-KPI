@@ -2177,7 +2177,7 @@ st.sidebar.markdown(image_ren, unsafe_allow_html = True)
 st.sidebar.markdown('**Auteur: Renaud Louis DAHOU**')
 st.sidebar.markdown('Email:dahou.r@yahoo.com')
 st.sidebar.markdown('[Linkedin](https://www.linkedin.com/in/dahou-renaud-louis-8958599a/)')
-st.sidebar.markdown('Pour tester HSE KPI RECORDER et faire des enregistrement, allez dans menu- connexion et mettez les informations de connexion:\nEmail:dahou.r@yahoo.com\nMot de passe:lyne18')
+st.sidebar.markdown('Pour tester HSE KPI RECORDER et faire des enregistrements, allez dans menu- connexion et mettez les informations de connexion:\nEmail:dahou.r@yahoo.com\nMot de passe:lyne18')
 
 if __name__ == '__main__':
     main()
