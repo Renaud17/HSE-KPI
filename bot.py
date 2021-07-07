@@ -20,10 +20,10 @@ import json
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.naive_bayes import MultinomialNB
 from sklearn.ensemble import VotingClassifier
 from sklearn.model_selection import GridSearchCV
 from responses import *
+from data import *
 # Lemmitization
 
 lemmer = nltk.stem.WordNetLemmatizer()
@@ -81,11 +81,10 @@ def bot_initialize(user_msg):
     flag=True
     while(flag==True):
         user_input = user_msg
-        
         user_intent = intent(user_input)
         
-        if (user_intent != 'Bye'):
-            if (user_input == 'Start'):
+        if (user_intent !=''):
+            if (user_input == '/start'):
                 resp = """Salut je  suis HSEbot une intelligence artificielle qui t'aide à identifier les dangers et les risques ainsi qu'à les prévenirs.Mon créateur est Dahou Renaud L:https://www.linkedin.com/in/dahou-renaud-louis-8958599a/\n\nComment puis-je t'aider ?\n\nTapez Bye pour quitter."""
                 return resp
             
@@ -105,41 +104,26 @@ def bot_initialize(user_msg):
                 resp = random.choice(responses[3]['response'])
                 return resp
 
-            elif (user_intent == 'confus'):
-                resp = random.choice(responses[4]['response'])
-                return resp
-
             elif (user_intent == 'but'):
                 resp = random.choice(responses[5]['response'])
                 return resp
 
-            elif (user_intent == 'début'):
-                resp = random.choice(responses[6]['response'])
-                return resp
-
-            elif (user_intent == 'ques'):
-                user_input=user_input.lower()
-                resp =  response(user_input)
+            elif (user_intent == 'conaissance'):
+                resp = random.choice(responses[1]['response'])
                 return resp
             
             elif (user_intent == "question"):
                 user_input=user_input.lower()
                 resp =  response(user_input)
-                return resp + "\n\n🎁CADEAU SURPRISE.🎁\nJe t'offre ce document HSE qui te servira un jour.😊:\n"+random.choice(book)
+                return resp #+ "\n\n🎁CADEAU SURPRISE.🎁\nJe t'offre ce document HSE qui te servira un jour.😊:\n"+random.choice(book)
 
-            elif (user_intent == "Act"):
-                user_input=user_input.lower()
-                resp =  response(user_input)
-                return resp + "\n\n🎁CADEAU SURPRISE.🎁\nJe t'offre ce document HSE qui te servira un jour.😊:\n"+random.choice(book)
-            
             else:
-                resp = random.choice(responses[4]['response'])
+                resp = "Désolé je ne comprend pas mon vocabulaire est en amélioration.Envoie ta question à mon créateur @Renaud17" #random.choice(responses[4]['response'])
                 return resp
-                
-            
+                   
         else:
             flag = False
-            resp = random.choice(responses[2]['response'])
+            resp = "Mais vous ne m'avez posé aucune question"+ ", comment puis-je vous aider?" #random.choice(responses[2]['response'])
             return resp
 
 
