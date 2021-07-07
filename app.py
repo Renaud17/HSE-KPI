@@ -99,7 +99,7 @@ def main():
     """
     st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
-    menu = ["Accueil", "Connexion"] #, "Inscription"
+    menu = ["Accueil", "Connexion","Inscription"] #
     choice = st.sidebar.selectbox("Menu",menu)
 
     if choice == "Accueil":
@@ -2170,7 +2170,7 @@ st.sidebar.markdown(image_ren, unsafe_allow_html = True)
 st.sidebar.markdown('**Auteur: Renaud Louis DAHOU**')
 st.sidebar.markdown('Email:dahou.r@yahoo.com')
 st.sidebar.markdown('[Linkedin](https://www.linkedin.com/in/dahou-renaud-louis-8958599a/)')
-st.sidebar.warning('Pour tester HSE KPI RECORDER et faire des enregistrements, allez dans menu- connexion et mettez les informations de connexion.\n Email:dahou.r@yahoo.com \n Mot de passe:lyne18')
+st.sidebar.warning('Pour tester HSE KPI RECORDER et faire des enregistrements, allez dans menu- connexion et mettez les informations de connexion') #.\n Email:dahou.r@yahoo.com \n Mot de passe:lyne18
 
 if __name__ == '__main__':
     main()
