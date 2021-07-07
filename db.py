@@ -1,11 +1,11 @@
+# DB Management
 import streamlit as st
 #import sqlite3
 import psycopg2
 
 #conn = sqlite3.connect('data.db', check_same_thread=False)
-#conn=psycopg2.connect("dbname='d47ep4809u8n1i' user='gnqjgldwuozvln' password='777ec0683293ba3a6e27fa9ce5e4a8622e38f5fec4c6207d4da51373b04d398e' host='ec2-23-20-124-77.compute-1.amazonaws.com' port='5432' ")
-#c = conn.cursor()
-
+conn=psycopg2.connect("dbname='d47ep4809u8n1i' user='gnqjgldwuozvln' password='777ec0683293ba3a6e27fa9ce5e4a8622e38f5fec4c6207d4da51373b04d398e' host='ec2-23-20-124-77.compute-1.amazonaws.com' port='5432' ")
+c = conn.cursor()
 
 def create_table():
     c.execute('CREATE TABLE IF NOT EXISTS userstable(id SERIAL PRIMARY KEY,email TEXT UNIQUE,password TEXT)')
