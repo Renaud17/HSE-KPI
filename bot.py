@@ -84,8 +84,8 @@ def bot_initialize(user_msg):
         user_intent = intent(user_input)
         
         if (user_intent !=''):
-            if (user_input == '/start'):
-                resp = """Salut je  suis HSEbot une intelligence artificielle qui t'aide à identifier les dangers et les risques ainsi qu'à les prévenirs.Mon créateur est Dahou Renaud L:https://www.linkedin.com/in/dahou-renaud-louis-8958599a/\n\nComment puis-je t'aider ?\n\nTapez Bye pour quitter."""
+            if (user_input == 'Ecrivez ici'):
+                resp = """Salut je  suis HSEbot une intelligence artificielle qui t'aide à identifier les dangers et les risques ainsi qu'à les prévenirs.Pour bien tiré profit de notre conversation, pose moi des questions précises, ne m'envoie pas juste un mot, je risque de mal répondre mon créateur m'a habitué aux questions courantes pas à définir des mots, je ne suis pas un dictionnaire 😊 \n\nComment puis-je t'aider ?"""
                 return resp
             
             elif (user_intent == 'salutation'):
