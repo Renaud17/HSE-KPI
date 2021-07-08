@@ -20,7 +20,8 @@ from bot import LemTokens,Normalize,Normalize,get_text,load_doc,intent,response,
 
 
 
-
+imglog = Image.open('logo.jpg')
+st.set_page_config(page_title='HSEbot-KPI', page_icon=imglog, initial_sidebar_state='expanded', layout='wide')#  layout="wide"
 
 @st.cache(allow_output_mutation=True)
 def to_excel(df):
@@ -2176,7 +2177,5 @@ st.sidebar.markdown('**Auteur: Renaud Louis DAHOU**')
 st.sidebar.markdown('Email:dahou.r@yahoo.com')
 st.sidebar.markdown('[Linkedin](https://www.linkedin.com/in/dahou-renaud-louis-8958599a/)')
 st.sidebar.warning('Pour tester HSE KPI RECORDER et faire des enregistrements, allez dans menu- connexion et mettez les informations de connexion ou inscrivez-vous si vous êtes nouveau.') #.\n Email:dahou.r@yahoo.com \n Mot de passe:lyne18
-imglog = Image.open('logo.jpg')
-st.set_page_config(page_title='HSEbot-KPI', page_icon=imglog, initial_sidebar_state='expanded', layout='wide')#  layout="wide"
 if __name__ == '__main__':
     main()
