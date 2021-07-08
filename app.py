@@ -104,20 +104,17 @@ def main():
 
     if choice == "Accueil":
         components.html("""
-
 			<style>
 			* {box-sizing: border-box}
 			body {font-family: Verdana, sans-serif; margin:0}
 			.mySlides {display: none}
 			img {vertical-align: middle;}
-
 			/* Slideshow container */
 			.slideshow-container {
 			  max-width: 1000px;
 			  position: relative;
 			  margin: auto;
 			}
-
 			/* Next & previous buttons */
 			.prev, .next {
 			  cursor: pointer;
@@ -133,18 +130,15 @@ def main():
 			  border-radius: 0 3px 3px 0;
 			  user-select: none;
 			}
-
 			/* Position the "next button" to the right */
 			.next {
 			  right: 0;
 			  border-radius: 3px 0 0 3px;
 			}
-
 			/* On hover, add a black background color with a little bit see-through */
 			.prev:hover, .next:hover {
 			  background-color: rgba(0,0,0,0.8);
 			}
-
 			/* Caption text */
 			.text {
 			  color: #f2f2f2;
@@ -155,7 +149,6 @@ def main():
 			  width: 100%;
 			  text-align: center;
 			}
-
 			/* Number text (1/3 etc) */
 			.numbertext {
 			  color: #f2f2f2;
@@ -164,7 +157,6 @@ def main():
 			  position: absolute;
 			  top: 0;
 			}
-
 			/* The dots/bullets/indicators */
 			.dot {
 			  cursor: pointer;
@@ -176,11 +168,9 @@ def main():
 			  display: inline-block;
 			  transition: background-color 0.6s ease;
 			}
-
 			.active, .dot:hover {
 			  background-color: #717171;
 			}
-
 			/* Fading animation */
 			.fade {
 			  -webkit-animation-name: fade;
@@ -188,17 +178,14 @@ def main():
 			  animation-name: fade;
 			  animation-duration: 1.5s;
 			}
-
 			@-webkit-keyframes fade {
 			  from {opacity: .4} 
 			  to {opacity: 1}
 			}
-
 			@keyframes fade {
 			  from {opacity: .4} 
 			  to {opacity: 1}
 			}
-
 			/* On smaller screens, decrease text size */
 			@media only screen and (max-width: 300px) {
 			  .prev, .next,.text {font-size: 11px}
@@ -206,52 +193,40 @@ def main():
 			</style>
 			</head>
 			<body>
-
 			<div class="slideshow-container">
-
 			<div class="mySlides fade">
 			  <div class="numbertext">1 / 3</div>
 			  <img src="https://cdn.shopify.com/s/files/1/2382/6729/products/SP124958.jpg?v=1536179866" style="width:100%;border-radius:5px;">
 			  <div class="text"></div>
 			</div>
-
 			<div class="mySlides fade">
 			  <div class="numbertext">2 / 3</div>
-
 			  <img src="https://www.hsetrain.org/images/slide1.jpg" style="width:100%;border-radius:5px;">
 			  <div class="text"></div>
 			</div>
-
 			<div class="mySlides fade">
 			  <div class="numbertext">3 / 3</div>
 			  <img src="https://www.spc.com.sg/wp-content/uploads/2015/11/banner-community-society-hse.jpg" style="width:100%;border-radius:5px;">
 			  <div class="text"></div>
 			</div>
-
 			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 			<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
 			</div>
 			<br>
-
 			<div style="text-align:center">
 			  <span class="dot" onclick="currentSlide(1)"></span> 
 			  <span class="dot" onclick="currentSlide(2)"></span> 
 			  <span class="dot" onclick="currentSlide(3)"></span> 
 			</div>
-
 			<script>
 			var slideIndex = 1;
 			showSlides(slideIndex);
-
 			function plusSlides(n) {
 			  showSlides(slideIndex += n);
 			}
-
 			function currentSlide(n) {
 			  showSlides(slideIndex = n);
 			}
-
 			function showSlides(n) {
 			  var i;
 			  var slides = document.getElementsByClassName("mySlides");
@@ -268,8 +243,6 @@ def main():
 			  dots[slideIndex-1].className += " active";
 			}
 			</script>
-
-
 			""")
         html_temp = """
 		<div style="background-color:#464e5f;padding:10px;border-radius:10px;margin:3px;">
