@@ -277,7 +277,7 @@ def main():
 		<p style="color:white;text-align:justify"></p>
 		</div>
 		"""
-        st.markdown(html_temp, unsafe_allow_html=True)
+                st.markdown(html_temp, unsafe_allow_html=True)
 		st.header("**Pourquoi HSE KPI RECORDER et HSEbot?**")
 		st.markdown("✨ ** Elle est une application d'analyse et de suivi des indicateurs de performance HSE dotée d'une intelligence artificielle pour identifier et prevenir les risques et dangers au travail.**")
 		st.markdown("✨ **Vous pouvez ajouter;modifier;supprimer et visualiser vos données avec des graphes**")
