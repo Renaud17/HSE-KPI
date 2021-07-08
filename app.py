@@ -20,8 +20,8 @@ from bot import LemTokens,Normalize,Normalize,get_text,load_doc,intent,response,
 
 
 
-imglog = Image.open('logo.jpg')
-st.set_page_config(page_title='HSEbot-KPI', page_icon=imglog, initial_sidebar_state='expanded', layout='wide')#  layout="wide"
+#imglog = Image.open('logo.jpg')
+#st.set_page_config(page_title='HSEbot-KPI', page_icon=imglog, initial_sidebar_state='expanded', layout='wide')#  layout="wide"
 
 @st.cache(allow_output_mutation=True)
 def to_excel(df):
