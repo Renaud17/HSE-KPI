@@ -273,13 +273,18 @@ def main():
 			""")
         html_temp = """
 		<div style="background-color:#464e5f;padding:10px;border-radius:10px;margin:3px;">
-		<h2 style="font-family: 'BadaBoom BB', sans-serif;color:white;text-align:center;"><b>HSE KPI RECORDER</b></h2>
-		<p style="color:white;text-align:justify">Application d'analyse et de suivi des indicateurs de performance HSE dotée d'une intelligence artificielle pour identifier et prevenir les risques et dangers au travail. Débutez une conversation avec HSEBOT ici 👇👇👇</p>
+		<h1 style="font-family: 'BadaBoom BB', sans-serif;color:white;text-align:center;"><b>HSE KPI RECORDER & HSEbot</b></h1>
+		<p style="color:white;text-align:justify"></p>
 		</div>
 		"""
-	
+        st.markdown(html_temp, unsafe_allow_html=True)
+	st.header("**Pourquoi HSE KPI RECORDER et HSEbot?**")
+	st.markdown("✨ ** Elle est une application d'analyse et de suivi des indicateurs de performance HSE dotée d'une intelligence artificielle pour identifier et prevenir les risques et dangers au travail.**")
+	st.markdown("✨ **Vous pouvez ajouter;modifier;supprimer et visualiser vos données avec des graphes**")
+	st.markdown("✨ **Vous pouvez aussi téléchager vos données selon l'intervalle de date souhaitée**")
+	st.markdown("✨ **HSEbot vous permet de discuter de manière inter-active avec une intelligence artificielle qui vous donne des conseils de prévention sur les risques au chantier.**")
         #components.html(html_temp)
-        st.markdown(html_temp, unsafe_allow_html = True)
+        #st.markdown(html_temp, unsafe_allow_html = True)
         image_BOT = """
 		<center><img src="https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G"  alt="HSEBOT" height="150" width="200"></center>
 		"""
