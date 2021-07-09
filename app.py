@@ -20,8 +20,31 @@ from bot import LemTokens,Normalize,Normalize,get_text,load_doc,intent,response,
 
 
 
-#imglog = Image.open('logo.jpg')
-#st.set_page_config(page_title='HSEbot-KPI', page_icon=imglog, initial_sidebar_state='expanded', layout='wide')#  layout="wide"
+imglog = Image.open('logo.jpg')
+st.set_page_config(page_title='HSEbot-KPI', page_icon=imglog, initial_sidebar_state='expanded', layout='wide')#  layout="wide"
+
+### Helper function to set a background image of our choice
+### For byte encoder
+import base64
+@st.cache(allow_output_mutation=True)
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+## Helper function to set a background image of our choice
+st.markdown(
+    """
+<style>
+.sidebar .sidebar-content {
+    background-image: linear-gradient(#87CEFA,white);
+    color: white;
+}
+</style>
+""",
+    unsafe_allow_html=True,
+)
+
 
 @st.cache(allow_output_mutation=True)
 def to_excel(df):
